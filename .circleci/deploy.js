@@ -12,11 +12,9 @@ var config = {
   include: ['*'],
 };
 
-console.log(config);
-
 ftpDeploy.deploy(config, function(err) {
   if (err) {
-    throw new Error(err);
+    console.error(err);
     process.exit(1);
   } else console.log('finished');
 });
