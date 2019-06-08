@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
+import { WorkTimeline } from '../components/WorkTimeline';
 
 const StyledApp = styled.div`
   .sr-only {
@@ -25,6 +26,7 @@ export const App: React.FunctionComponent = () => {
     <>
       <Hero imageSrc="" />
       <TechnologiesBar />
+      <WorkTimeline />
     </>
   );
 };
