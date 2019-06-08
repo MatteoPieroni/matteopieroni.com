@@ -1,10 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-const App: React.FC = () => {
-  return (
-    <div>Hello My Friend!</div>
-  )
-};
+import { App } from './pages/App';
 
 ReactDOM.render(<App />, document.getElementById('app'));
