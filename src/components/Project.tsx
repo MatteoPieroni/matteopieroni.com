@@ -17,7 +17,9 @@ export const Project: React.FunctionComponent<IProjectProps> = ({
       <p>{text}</p>
       {topics && (
         <div>
-          topics.map(topic => <span>{topic}</span>)
+          {topics.map(topic => (
+            <span>{topic}</span>
+          ))}
         </div>
       )}
     </div>
