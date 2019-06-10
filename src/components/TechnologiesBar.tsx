@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import GliderComponent from 'react-glider-carousel';
 
 import { Css3 } from './Icons/Css3';
 import { Angular } from './Icons/Angular';
@@ -19,10 +20,8 @@ const StyledSection = styled.section`
 `;
 
 const StyledDiv = styled.div`
-  display: flex;
   height: 100px;
   background: #e0e0e0;
-  overflow: auto;
 `;
 
 export const TechnologiesBar: React.FunctionComponent = () => {
@@ -30,16 +29,18 @@ export const TechnologiesBar: React.FunctionComponent = () => {
     <StyledSection>
       <h2>Technologies</h2>
       <StyledDiv>
-        <Css3 />
-        <Angular />
-        <Drupal />
-        <GraphQL />
-        <Html5 />
-        <JS />
-        <JQuery />
-        <ReactLogo />
-        <Redux />
-        <Wordpress />
+        <GliderComponent settings={{ slidesToShow: 2 }}>
+          <Html5 />
+          <Css3 />
+          <JS />
+          <ReactLogo />
+          <Redux />
+          <Angular />
+          <GraphQL />
+          <Drupal />
+          <JQuery />
+          <Wordpress />
+        </GliderComponent>
       </StyledDiv>
     </StyledSection>
   );

@@ -1,10 +1,10 @@
-import {Css3} from './Css3';
-import {Angular} from './Angular';
-import {Drupal} from './Drupal'
-import {GraphQL} from './Graphql'
-import {Html5} from './Html5';
-import {JS} from './Javascript';
-import {JQuery} from './Jquery';
-import {ReactLogo} from './React';
-import {Redux} from './Redux';
-import {Wordpress} from './Wordpress';
+import { Css3 } from './Css3';
+import { Angular } from './Angular';
+import { Drupal } from './Drupal';
+import { GraphQL } from './Graphql';
+import { Html5 } from './Html5';
+import { JS } from './Javascript';
+import { JQuery } from './Jquery';
+import { ReactLogo } from './React';
+import { Redux } from './Redux';
+import { Wordpress } from './Wordpress';

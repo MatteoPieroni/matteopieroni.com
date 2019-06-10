@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
 import { WorkTimeline } from '../components/WorkTimeline';
+import '../lib/glider.min.css';
 
 const StyledApp = styled.div`
   .sr-only {

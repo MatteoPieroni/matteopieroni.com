@@ -7,6 +7,7 @@ export const StyledIcon = styled.div`
   margin: 0 0.25rem;
   padding: 1rem 0.5rem;
   min-width: 33%;
+  max-height: calc(100px - 2rem);
   svg {
     max-width: 100%;
     width: auto;

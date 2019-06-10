@@ -5529,6 +5529,11 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
+react-glider-carousel@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-glider-carousel/-/react-glider-carousel-0.1.2.tgz#74852ab109fc97f53550fc12a265175effd6d680"
+  integrity sha512-+Ng9dUw8WV6pnLuQlbkHTr71GYahvKSFkJqjZHCRPgF5e9PSAD0+g4+DF839KtpAJM/8/n6Z5w0Q3s+KAg9jVg==
+
 react-is@^16.6.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
