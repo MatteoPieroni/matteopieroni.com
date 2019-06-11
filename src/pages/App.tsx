@@ -6,7 +6,13 @@ import { TechnologiesBar } from '../components/TechnologiesBar';
 import { WorkTimeline } from '../components/WorkTimeline';
 import '../lib/glider.min.css';
 
-const StyledApp = styled.div`
+const StyledApp = styled.main`
+  margin: 0 0.5rem;
+
+  .full-width {
+    margin: 0 -0.5rem;
+  }
+
   .sr-only {
     border: 0 !important;
     clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -24,11 +30,11 @@ const StyledApp = styled.div`
 
 export const App: React.FunctionComponent = () => {
   return (
-    <>
+    <StyledApp>
       <Hero imageSrc="" />
       <TechnologiesBar />
       <WorkTimeline />
-    </>
+    </StyledApp>
   );
 };
 

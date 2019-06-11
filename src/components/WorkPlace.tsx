@@ -46,16 +46,18 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
       {company.projects && (
         <div>
           <h5>Most interesting projects</h5>
-          <GliderComponent>
-            {company.projects.map(project => (
-              <Project
-                title={project.projectTitle}
-                text={project.text}
-                topics={project.topics}
-                key={project.projectTitle}
-              />
-            ))}
-          </GliderComponent>
+          <div className="full-width">
+            <GliderComponent>
+              {company.projects.map(project => (
+                <Project
+                  title={project.projectTitle}
+                  text={project.text}
+                  topics={project.topics}
+                  key={project.projectTitle}
+                />
+              ))}
+            </GliderComponent>
+          </div>
         </div>
       )}
       {company.listOfLinks && (

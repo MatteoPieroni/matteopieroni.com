@@ -26,7 +26,7 @@ const StyledDiv = styled.div`
 
 export const TechnologiesBar: React.FunctionComponent = () => {
   return (
-    <StyledSection>
+    <StyledSection className="full-width">
       <h2>Technologies</h2>
       <StyledDiv>
         <GliderComponent settings={{ slidesToShow: 2 }}>
