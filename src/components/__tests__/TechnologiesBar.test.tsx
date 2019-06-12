@@ -2,6 +2,7 @@ import * as React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import { TechnologiesBar } from '../TechnologiesBar';
+import GliderComponent from 'react-glider-carousel';
 
 describe('TechnologiesBar', () => {
   let wrapper: any;
@@ -28,5 +29,8 @@ describe('TechnologiesBar mounted', () => {
   });
   it('returns at least one label', () => {
     expect(wrapper.find('label').length).toBeGreaterThanOrEqual(1);
+  });
+  it('returns a GliderComponent', () => {
+    expect(wrapper.containsMatchingElement(<GliderComponent />));
   });
 });
