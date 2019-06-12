@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import '../lib/glider.min.css';
 
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
 import { WorkTimeline } from '../components/WorkTimeline';
-import '../lib/glider.min.css';
+import { PersonalProjects } from '../components/PersonalProjects';
 
 const StyledApp = styled.main`
   margin: 0 0.5rem;
@@ -31,9 +32,10 @@ const StyledApp = styled.main`
 export const App: React.FunctionComponent = () => {
   return (
     <StyledApp>
-      <Hero imageSrc="" />
+      <Hero />
       <TechnologiesBar />
       <WorkTimeline />
+      <PersonalProjects />
     </StyledApp>
   );
 };

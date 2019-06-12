@@ -5,10 +5,6 @@ import mobileImage from '../assets/matteo-pieroni-front-end-developer-640.jpg';
 import tabletImage from '../assets/matteo-pieroni-front-end-developer-960.jpg';
 import desktopImage from '../assets/matteo-pieroni-front-end-developer-1920.jpg';
 
-export interface IHeroProps {
-  imageSrc: string;
-}
-
 const StyledHero = styled.section`
   .text {
     position: relative;
@@ -37,7 +33,7 @@ const StyledHero = styled.section`
   }
 `;
 
-export const Hero: React.FC<IHeroProps> = ({ imageSrc }) => {
+export const Hero: React.FC = () => {
   return (
     <StyledHero className="full-width">
       <div className="text">
