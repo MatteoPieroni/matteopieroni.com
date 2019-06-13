@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const GraphQL: React.FunctionComponent = props => {
   return (
     <StyledIcon>
+      <label htmlFor="graphql-logo" tabIndex={0}>
+        GraphQL
+      </label>
       <svg
         viewBox="0 0 256 288"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +18,6 @@ export const GraphQL: React.FunctionComponent = props => {
           fillRule="evenodd"
         />
       </svg>
-      <label htmlFor="graphql-logo">GraphQL</label>
     </StyledIcon>
   );
 };

@@ -28,7 +28,7 @@ export const Project: React.FunctionComponent<IProjectProps> = ({
   topics,
 }) => {
   return (
-    <StyledProject>
+    <StyledProject tabIndex={0}>
       <h4>{title}</h4>
       <p>{text}</p>
       {topics && (

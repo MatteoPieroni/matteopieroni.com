@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const JQuery: React.FunctionComponent = props => {
   return (
     <StyledIcon>
+      <label htmlFor="jquery-logo" tabIndex={0}>
+        jQuery
+      </label>
       <svg
         viewBox="0 0 512 116"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +28,6 @@ export const JQuery: React.FunctionComponent = props => {
           </g>
         </g>
       </svg>
-      <label htmlFor="jquery-logo">jQuery</label>
     </StyledIcon>
   );
 };

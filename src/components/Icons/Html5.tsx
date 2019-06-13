@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const Html5: React.FunctionComponent = () => {
   return (
     <StyledIcon>
+      <label htmlFor="html-logo" tabIndex={0}>
+        HTML5
+      </label>
       <svg
         viewBox="0 0 256 361"
         xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +30,6 @@ export const Html5: React.FunctionComponent = () => {
           fill="#FFF"
         />
       </svg>
-      <label htmlFor="html-logo">HTML5</label>
     </StyledIcon>
   );
 };

@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const Angular: React.FunctionComponent = () => {
   return (
     <StyledIcon>
+      <label htmlFor="angular-logo" tabIndex={0}>
+        AngularJS
+      </label>
       <svg
         viewBox="0 0 512 132"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +44,6 @@ export const Angular: React.FunctionComponent = () => {
           />
         </g>
       </svg>
-      <label htmlFor="angular-logo">AngularJS</label>
     </StyledIcon>
   );
 };

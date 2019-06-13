@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const Css3: React.FunctionComponent = () => {
   return (
     <StyledIcon>
+      <label htmlFor="css-logo" tabIndex={0}>
+        CSS3
+      </label>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 538.584 538.583"
@@ -96,7 +99,6 @@ export const Css3: React.FunctionComponent = () => {
           opacity=".05"
         />
       </svg>
-      <label htmlFor="css-logo">CSS3</label>
     </StyledIcon>
   );
 };

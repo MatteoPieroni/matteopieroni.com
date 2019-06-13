@@ -6,7 +6,6 @@ export const StyledIcon = styled.div`
   justify-content: center;
   margin: 0 0.25rem;
   padding: 1rem 0.5rem;
-  min-width: 33%;
   max-height: calc(100px - 2rem);
   svg {
     max-width: 100%;
@@ -25,5 +24,8 @@ export const StyledIcon = styled.div`
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
+    &:focus ~ svg {
+      outline: 2px dashed #333;
+    }
   }
 `;

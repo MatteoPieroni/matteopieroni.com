@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const Redux: React.FunctionComponent = () => {
   return (
     <StyledIcon>
+      <label htmlFor="redux-logo" tabIndex={0}>
+        Redux
+      </label>
       <svg
         viewBox="0 0 256 244"
         xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +17,6 @@ export const Redux: React.FunctionComponent = () => {
           fill="#764ABC"
         />
       </svg>
-      <label htmlFor="redux-logo">Redux</label>
     </StyledIcon>
   );
 };

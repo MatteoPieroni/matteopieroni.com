@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const JS: React.FunctionComponent = props => {
   return (
     <StyledIcon>
+      <label htmlFor="javascript-logo" tabIndex={0}>
+        JavaScript
+      </label>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1052 1052"
@@ -15,7 +18,6 @@ export const JS: React.FunctionComponent = props => {
           fill="#323330"
         />
       </svg>
-      <label htmlFor="javascript-logo">JavaScript</label>
     </StyledIcon>
   );
 };

@@ -4,6 +4,9 @@ import { StyledIcon } from './StyledIcon';
 export const Drupal: React.FunctionComponent = props => {
   return (
     <StyledIcon>
+      <label htmlFor="drupal-logo" tabIndex={0}>
+        Drupal 8
+      </label>
       <svg
         viewBox="55.36 226.06 700.98 179.59"
         width="2500"
@@ -15,7 +18,6 @@ export const Drupal: React.FunctionComponent = props => {
           <path d="m607.9 369.57h29.51v-53.92a58 58 0 1 0 -73.78 55.85c27.24 6.64 39.51-14.52 41.75-20.08.23-.57.44-1.2 1.39-1.19s1.11 1.19 1.11 1.19m.85-35.77a29.37 29.37 0 1 1 -29.37-29.37 29.38 29.38 0 0 1 29.37 29.37zm-519.89 53.69h-33.48v-143.28h35.92c43.51 0 76.51 8 76.51 71.64 0 63.05-34.95 71.64-78.95 71.64zm8-118.44h-11.84v93.58l12.15.31c24.93 0 41-2.26 41-47.09-.01-42.98-14.15-46.8-41.32-46.8z" />
         </g>
       </svg>
-      <label htmlFor="drupal-logo">Drupal 8</label>
     </StyledIcon>
   );
 };

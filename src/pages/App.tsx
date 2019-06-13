@@ -10,6 +10,26 @@ import { PersonalProjects } from '../components/PersonalProjects';
 const StyledApp = styled.main`
   margin: 0 0.5rem;
 
+  h2 {
+    font-size: 1.7rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  *:focus {
+    outline: 2px dashed #333;
+  }
+
   .full-width {
     margin: 0 -0.5rem;
   }
