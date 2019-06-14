@@ -25,8 +25,22 @@ interface IWorkPlaceProps {
 }
 
 const StyledDiv = styled.div`
+  margin-top: 2.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+  h3 {
+    margin: 1rem auto 0 auto;
+  }
+  .date-place {
+    margin-top: 0;
+  }
   p {
     white-space: pre-wrap;
+  }
+  h5 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 `;
 
@@ -36,7 +50,7 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
   return (
     <StyledDiv>
       <h3>{company.name}</h3>
-      <p>
+      <p className="date-place">
         {company.dates} - {company.place}
       </p>
       <p>{company.description}</p>
