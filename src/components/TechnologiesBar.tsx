@@ -12,16 +12,19 @@ import { JQuery } from './Icons/Jquery';
 import { ReactLogo } from './Icons/React';
 import { Redux } from './Icons/Redux';
 import { Wordpress } from './Icons/Wordpress';
+import { IStyledProps } from '../pages/App';
 
 const StyledSection = styled.section`
+  margin-top: 2.5rem;
   h2 {
     text-align: center;
+    text-decoration: underline;
   }
 `;
 
 const StyledDiv = styled.div`
   height: 100px;
-  background: #e0e0e0;
+  background: ${(props: IStyledProps) => props.theme.colors.primary};
 `;
 
 export const TechnologiesBar: React.FunctionComponent = () => {
@@ -29,7 +32,7 @@ export const TechnologiesBar: React.FunctionComponent = () => {
     <StyledSection className="full-width">
       <h2>Technologies</h2>
       <StyledDiv>
-        <GliderComponent settings={{ slidesToShow: 2 }}>
+        <GliderComponent settings={{ slidesToShow: 2, draggable: true }}>
           <Html5 />
           <Css3 />
           <JS />

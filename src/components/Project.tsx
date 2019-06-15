@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { IStyledProps } from '../pages/App';
 
 interface IProjectProps {
   title: string;
@@ -11,6 +12,7 @@ const StyledProject = styled.div`
   margin: 1rem;
   border-radius: 5px;
   padding: 1rem;
+  background: ${(props: IStyledProps) => props.theme.colors.card}
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
   h4 {
     margin-top: 0;

@@ -14,8 +14,10 @@ interface IPersonalProjectProps {
 }
 
 const StyledDiv = styled.div`
-  a {
-    display: block;
+  margin-top: 1.5rem;
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -31,6 +33,7 @@ export const PersonalProject: React.FunctionComponent<
       <a href={project.url} target="_blank">
         See project {project.noteOnUrl && `(${project.noteOnUrl})`}
       </a>
+      <br />
       <a href={project.sourceUrl} target="_blank">
         Source on Github
       </a>

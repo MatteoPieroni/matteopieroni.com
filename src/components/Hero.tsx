@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import mobileImage from '../assets/matteo-pieroni-front-end-developer-640.jpg';
 import tabletImage from '../assets/matteo-pieroni-front-end-developer-960.jpg';
 import desktopImage from '../assets/matteo-pieroni-front-end-developer-1920.jpg';
+import { IStyledProps } from '../pages/App';
 
 const StyledHero = styled.section`
   .text {
     position: relative;
     &:before {
       content: '';
-      background: linear-gradient(0.5turn, white, transparent);
+      background: ${(props: IStyledProps) => props.theme.photoGradient};
       position: absolute;
       top: 0;
       left: 0;
@@ -23,13 +24,15 @@ const StyledHero = styled.section`
     top: 1%;
     left: 3%;
     width: 94%;
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   img {
     display: block;
     width: 100%;
     object-position: center;
     object-fit: contain;
+    filter: ${(props: IStyledProps) =>
+      props.theme.grayscale ? 'brightness(0.5) grayscale(.5)' : 'none'};
   }
 `;
 

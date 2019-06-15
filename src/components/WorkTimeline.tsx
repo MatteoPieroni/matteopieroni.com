@@ -5,7 +5,11 @@ import { Workplaces } from '../data/Workplaces';
 import WorkPlace from './WorkPlace';
 
 const StyledSection = styled.section`
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
 `;
 
 export const WorkTimeline: React.FunctionComponent = () => {

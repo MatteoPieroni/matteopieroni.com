@@ -25,7 +25,7 @@ interface IWorkPlaceProps {
 }
 
 const StyledDiv = styled.div`
-  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -41,6 +41,13 @@ const StyledDiv = styled.div`
   h5 {
     margin-top: 1.5rem;
     margin-bottom: 0;
+  }
+`;
+
+const StyledUl = styled.ul`
+  padding-left: 0;
+  li {
+    list-style: none;
   }
 `;
 
@@ -77,13 +84,13 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
       {company.listOfLinks && (
         <div>
           <h5>Examples of realised websites</h5>
-          <ul>
+          <StyledUl>
             {company.listOfLinks.map(link => (
               <li key={link}>
                 <a href={link}>{link}</a>
               </li>
             ))}
-          </ul>
+          </StyledUl>
         </div>
       )}
     </StyledDiv>
