@@ -3,10 +3,12 @@ import { shallow, mount } from 'enzyme';
 
 import { Hero } from '../Hero';
 
+const fakeThemeFn = (e: boolean) => {};
+
 describe('Hero', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = shallow(<Hero />);
+    wrapper = shallow(<Hero changeTheme={fakeThemeFn} isLightTheme={true} />);
   });
 
   it('returns an h1 element', () => {
@@ -22,7 +24,7 @@ describe('Hero', () => {
 describe('Mounted Hero', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = mount(<Hero />);
+    wrapper = mount(<Hero changeTheme={fakeThemeFn} isLightTheme={true} />);
   });
 
   it('returns a container section element', () => {

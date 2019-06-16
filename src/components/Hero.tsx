@@ -6,6 +6,11 @@ import tabletImage from '../assets/matteo-pieroni-front-end-developer-960.jpg';
 import desktopImage from '../assets/matteo-pieroni-front-end-developer-1920.jpg';
 import { IStyledProps } from '../pages/App';
 
+interface IHeroProps {
+  isLightTheme: boolean;
+  changeTheme: (e: boolean) => void;
+}
+
 const StyledHero = styled.section`
   .text {
     position: relative;
@@ -36,7 +41,7 @@ const StyledHero = styled.section`
   }
 `;
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<IHeroProps> = props => {
   return (
     <StyledHero className="full-width">
       <div className="text">
@@ -51,6 +56,14 @@ export const Hero: React.FC = () => {
           Front End Developer
         </h1>
       </div>
+      <label>
+        Light Theme
+        <input
+          checked={props.isLightTheme}
+          type="checkbox"
+          onChange={e => props.changeTheme(e.target.checked)}
+        />
+      </label>
     </StyledHero>
   );
 };

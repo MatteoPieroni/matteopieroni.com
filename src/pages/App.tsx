@@ -12,6 +12,23 @@ import { WorkTimeline } from '../components/WorkTimeline';
 import { PersonalProjects } from '../components/PersonalProjects';
 import ExternalLinkIcon from '../assets/external-link-icon.svg';
 
+export interface IStyledProps {
+  theme: {
+    boxShadow?: string;
+    photoGradient: string;
+    grayscale: boolean;
+
+    colors: {
+      primary: string;
+      primaryLighter: string;
+      card: string;
+      background: string;
+      text: string;
+      secondary: string;
+    };
+  };
+}
+
 const lightTheme: DefaultTheme = {
   photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
   grayscale: false,
@@ -37,23 +54,6 @@ const darkTheme: DefaultTheme = {
     secondary: '#a64942',
   },
 };
-
-export interface IStyledProps {
-  theme: {
-    boxShadow?: string;
-    photoGradient: string;
-    grayscale: boolean;
-
-    colors: {
-      primary: string;
-      primaryLighter: string;
-      card: string;
-      background: string;
-      text: string;
-      secondary: string;
-    };
-  };
-}
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -154,12 +154,22 @@ const StyledApp = styled.main`
 `;
 
 export const App: React.FunctionComponent = () => {
+  const [theme, setTheme] = React.useState(lightTheme);
+
+  const changeTheme = (isChecked: boolean) => {
+    const whichTheme = isChecked ? lightTheme : darkTheme;
+    setTheme(whichTheme);
+  };
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
         <StyledApp>
-          <Hero />
+          <Hero
+            changeTheme={changeTheme}
+            isLightTheme={theme === lightTheme ? true : false}
+          />
           <TechnologiesBar />
           <WorkTimeline />
           <PersonalProjects />
