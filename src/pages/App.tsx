@@ -11,6 +11,7 @@ import { TechnologiesBar } from '../components/TechnologiesBar';
 import { WorkTimeline } from '../components/WorkTimeline';
 import { PersonalProjects } from '../components/PersonalProjects';
 import ExternalLinkIcon from '../assets/external-link-icon.svg';
+import { ThemeChanger } from '../components/ThemeChanger';
 
 export interface IStyledProps {
   theme: {
@@ -117,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
       height: 0.25rem;
     }
   }
-  a:not([href*='yourdomain.com']):not([href^='#']):not([href^='/']) {
+  a:not([href*='matteopieroni.com']):not([href^='#']):not([href^='/']) {
     background-image: url(${ExternalLinkIcon});
     background-origin: center;
     background-position: center right;
@@ -154,10 +155,10 @@ const StyledApp = styled.main`
 `;
 
 export const App: React.FunctionComponent = () => {
-  const [theme, setTheme] = React.useState(lightTheme);
+  const [theme, setTheme] = React.useState(darkTheme);
 
   const changeTheme = (isChecked: boolean) => {
-    const whichTheme = isChecked ? lightTheme : darkTheme;
+    const whichTheme = isChecked ? darkTheme : lightTheme;
     setTheme(whichTheme);
   };
 
@@ -166,10 +167,11 @@ export const App: React.FunctionComponent = () => {
       <>
         <GlobalStyle />
         <StyledApp>
-          <Hero
+          <ThemeChanger
             changeTheme={changeTheme}
-            isLightTheme={theme === lightTheme ? true : false}
+            isDarkTheme={theme === lightTheme ? true : false}
           />
+          <Hero />
           <TechnologiesBar />
           <WorkTimeline />
           <PersonalProjects />

@@ -8,7 +8,7 @@ const fakeThemeFn = (e: boolean) => {};
 describe('Hero', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = shallow(<Hero changeTheme={fakeThemeFn} isLightTheme={true} />);
+    wrapper = shallow(<Hero />);
   });
 
   it('returns an h1 element', () => {
@@ -24,7 +24,7 @@ describe('Hero', () => {
 describe('Mounted Hero', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = mount(<Hero changeTheme={fakeThemeFn} isLightTheme={true} />);
+    wrapper = mount(<Hero />);
   });
 
   it('returns a container section element', () => {
