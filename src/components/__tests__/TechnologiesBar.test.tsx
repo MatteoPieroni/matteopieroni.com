@@ -3,24 +3,17 @@ import { shallow, mount } from 'enzyme';
 
 import { TechnologiesBar } from '../TechnologiesBar';
 import GliderComponent from 'react-glider-carousel';
+import { mountWithTheme, mockTheme } from '../../test-utilities';
 
-describe('TechnologiesBar', () => {
+describe('TechnologiesBar mounted', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = shallow(<TechnologiesBar />);
+    wrapper = mountWithTheme(<TechnologiesBar />, mockTheme);
   });
 
   it('returns an h2 element', () => {
     expect(wrapper.find('h2').length).toEqual(1);
   });
-});
-
-describe('TechnologiesBar mounted', () => {
-  let wrapper: any;
-  beforeEach(() => {
-    wrapper = mount(<TechnologiesBar />);
-  });
-
   it('returns an section element', () => {
     expect(wrapper.find('section').length).toEqual(1);
   });

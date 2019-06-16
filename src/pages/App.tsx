@@ -30,7 +30,7 @@ export interface IStyledProps {
   };
 }
 
-const lightTheme: DefaultTheme = {
+export const lightTheme: DefaultTheme = {
   photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
   grayscale: false,
   colors: {
@@ -43,7 +43,7 @@ const lightTheme: DefaultTheme = {
   },
 };
 
-const darkTheme: DefaultTheme = {
+export const darkTheme: DefaultTheme = {
   photoGradient: 'linear-gradient(0.5turn, #000, transparent)',
   grayscale: true,
   colors: {
