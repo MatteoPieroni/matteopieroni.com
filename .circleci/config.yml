@@ -15,6 +15,8 @@ jobs:
       - checkout
       - run: yarn install
       - run: yarn test-ci
+      - store_test_results:
+        path: test-results
       - run: yarn build
       - run: node .circleci/deploy.js
 

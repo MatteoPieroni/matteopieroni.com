@@ -74,5 +74,9 @@
       "default",
       "jest-junit"
     ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./test-results/jest",
+    "outputName": "./results.xml"
   }
 }
