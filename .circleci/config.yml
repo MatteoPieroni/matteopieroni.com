@@ -15,13 +15,13 @@ jobs:
       - checkout
       - run: yarn install
       - run:
-        name: Install JUnit coverage reporter
         command: yarn add --dev jest-junit
+        name: Install JUnit coverage reporter
       - run:
-          name: Run tests with JUnit as reporter
           command: npx jest --ci --runInBand --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+          name: Run tests with JUnit as reporter
       - run: yarn test
       - run: yarn build
       - run: node .circleci/deploy.js
