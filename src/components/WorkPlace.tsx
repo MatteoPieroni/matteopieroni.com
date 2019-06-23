@@ -2,7 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import GliderComponent from 'react-glider-carousel';
 
-import Project from './Project';
+import { Project } from './Project';
+import { Website } from './Website';
 
 interface ICompany {
   name: string;
@@ -11,13 +12,18 @@ interface ICompany {
   description: string;
   tech: string;
   projects?: IProject[];
-  listOfLinks?: string[];
+  listOfLinks?: IWebsite[];
 }
 
 interface IProject {
   projectTitle: string;
   text: string;
   topics?: string[];
+}
+
+interface IWebsite {
+  link: string;
+  image: string;
 }
 
 interface IWorkPlaceProps {
@@ -42,14 +48,31 @@ const StyledDiv = styled.div`
     margin-top: 1.5rem;
     margin-bottom: 0;
   }
-`;
-
-const StyledUl = styled.ul`
-  padding-left: 0;
-  li {
-    list-style: none;
+  .glider-track {
+    padding: 0 calc((100vw - 1200px) / 2);
   }
 `;
+
+const responsiveGliderSettings = [
+  {
+    breakpoint: 767.5,
+    settings: {
+      slidesToShow: 2,
+    },
+  },
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+    },
+  },
+  {
+    breakpoint: 1200,
+    settings: {
+      slidesToShow: 4,
+    },
+  },
+];
 
 export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
   company,
@@ -66,9 +89,14 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
       </p>
       {company.projects && (
         <div>
-          <h5>Most interesting projects</h5>
+          <h4>Most interesting projects</h4>
           <div className="full-width">
-            <GliderComponent>
+            <GliderComponent
+              settings={{
+                draggable: true,
+                responsive: responsiveGliderSettings,
+              }}
+            >
               {company.projects.map(project => (
                 <Project
                   title={project.projectTitle}
@@ -83,14 +111,12 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
       )}
       {company.listOfLinks && (
         <div>
-          <h5>Examples of realised websites</h5>
-          <StyledUl>
+          <h4>Examples of realised websites</h4>
+          <div>
             {company.listOfLinks.map(link => (
-              <li key={link}>
-                <a href={link}>{link}</a>
-              </li>
+              <Website key={link.link} link={link.link} image={link.image} />
             ))}
-          </StyledUl>
+          </div>
         </div>
       )}
     </StyledDiv>

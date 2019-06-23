@@ -9,6 +9,7 @@ import { IStyledProps } from '../pages/App';
 const StyledHero = styled.section`
   .text {
     position: relative;
+    display: flex;
     &:before {
       content: '';
       background: ${(props: IStyledProps) => props.theme.photoGradient};
@@ -18,6 +19,10 @@ const StyledHero = styled.section`
       bottom: 0;
       right: 0;
     }
+
+    @media (min-width: 768px) {
+      max-height: 50vh;
+    }
   }
   h1 {
     position: absolute;
@@ -25,6 +30,19 @@ const StyledHero = styled.section`
     left: 3%;
     width: 94%;
     font-size: 2.25rem;
+
+    @media (min-width: 768px) {
+      left: 50%;
+      display: block;
+      max-width: 1200px;
+      font-size: 2.75rem;
+      transform: translateX(-50%);
+    }
+    font-size: 2.25rem;
+
+    @media (min-width: 1024px) {
+      font-size: 3.5rem;
+    }
   }
   img {
     display: block;
@@ -33,6 +51,11 @@ const StyledHero = styled.section`
     object-fit: contain;
     filter: ${(props: IStyledProps) =>
       props.theme.grayscale ? 'brightness(0.5) grayscale(.5)' : 'none'};
+
+    @media (min-width: 768px) {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 `;
 

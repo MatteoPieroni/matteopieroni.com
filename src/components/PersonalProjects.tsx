@@ -5,10 +5,31 @@ import { PersonalProject, IPersonalProject } from './PersonalProject';
 import { projects } from '../data/PersonalProjects';
 
 const StyledSection = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
   margin-top: 2.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+
   h2 {
     text-align: center;
     text-decoration: underline;
+
+    @media (min-width: 768px) {
+      grid-column: 1 / span 2;
+    }
+
+    @media (min-width: 1200px) {
+      grid-column: 1 / span 4;
+    }
   }
 `;
 

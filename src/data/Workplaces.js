@@ -4,7 +4,7 @@ export const Workplaces = [
     dates: '2018 - 2019',
     place: 'London',
     description:
-      'At Abel & Cole, my role is Front End Developer, working on the e-commerce web platform.The platform is based on an MVC .NET backend, that used Razor and jQuery. \n I have been part of the transition to modern architecture, mainly using React and Redux, and CI/CD pipeline on Azure.',
+      'At Abel & Cole, my role is Front End Developer, working on the e-commerce web platform. The platform is based on an MVC .NET backend, that used Razor and jQuery. \n I have been part of the transition to modern architecture, mainly using React and Redux, and CI/CD pipeline on Azure.',
     tech:
       'React, Redux, jQuery, Lodash, Node, Npm, Browserify, Babel, Less, Bem (methodology), Bootstrap,Pa11y, Google Lighthouse, React Native, GIT, Azure Pipelines, Agile (methodology)',
     projects: [
@@ -16,12 +16,12 @@ export const Workplaces = [
       {
         projectTitle: 'Accessibility Improvements',
         text:
-          'I analysed the existing accessibility of the website and set myself as A11y champion, writing andchanging code to use the best tools of the languages, to provide the best experience for all users.I also created and published an Npm package called Acest, to be added to the pipeline for testingthe accessibility of the deployed websites.',
+          'I analysed the existing accessibility of the website and set myself as A11y champion, writing and changing code to use the best tools of the languages, to provide the best experience for all users.I also created and published an Npm package called Acest, to be added to the pipeline for testing the accessibility of the deployed websites.',
       },
       {
         projectTitle: 'Introduction of Jest',
         text:
-          'I introduced Front End unit tests using Jest as the testing framework, to test vanilla JavaScriptand React/Redux code. In React I also introduced the use of Enzyme.',
+          'I introduced Front End unit tests using Jest as the testing framework, to test vanilla JavaScript and React/Redux code. In React I also introduced the use of Enzyme.',
       },
       {
         projectTitle: 'POC of App',
@@ -39,13 +39,34 @@ export const Workplaces = [
     tech:
       'Sass, Grunt, Foundation, Bootstrap, jQuery, Wordpress, Woocommerce, Drupal 8, MODX, Illustrator, Photoshop, Adobe Animate',
     listOfLinks: [
-      'http://www.lalocandafrancigena.it',
-      'http://www.memphremagog.it',
-      'http://madeinlucca.it',
-      'https://www.miabamabag.it',
-      'http://www.tecnoservice.lucca.it',
-      'http://www.rctabletop.it',
-      'http://www.eventservicetuscany.it',
+      {
+        link: 'http://www.lalocandafrancigena.it',
+        image: 'website-locanda-francigena-matteo-pieroni.jpg',
+      },
+      {
+        link: 'http://www.memphremagog.it',
+        image: 'website-memphremagog-matteo-pieroni.jpg',
+      },
+      {
+        link: 'http://madeinlucca.it',
+        image: 'website-made-in-lucca-matteo-pieroni.jpg',
+      },
+      {
+        link: 'https://www.miabamabag.it',
+        image: 'website-mia-bama-bag-matteo-pieroni.jpg',
+      },
+      {
+        link: 'http://www.tecnoservice.lucca.it',
+        image: 'website-tecnoservice-lucca-matteo-pieroni.jpg',
+      },
+      {
+        link: 'http://www.rctabletop.it',
+        image: 'website-rctt-matteo-pieroni.jpg',
+      },
+      {
+        link: 'http://www.eventservicetuscany.it',
+        image: 'website-est-matteo-pieroni.jpg',
+      },
     ],
   },
   {

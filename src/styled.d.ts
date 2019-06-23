@@ -11,6 +11,7 @@ declare module 'styled-components' {
       primary: string;
       primaryLighter: string;
       background: string;
+      backgroundLighter: string;
       text: string;
       secondary: string;
       card: string;

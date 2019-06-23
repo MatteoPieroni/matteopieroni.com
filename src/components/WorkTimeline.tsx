@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Workplaces } from '../data/Workplaces';
-import WorkPlace from './WorkPlace';
+import { WorkPlace } from './WorkPlace';
 
 const StyledSection = styled.section`
   margin-top: 2.5rem;
