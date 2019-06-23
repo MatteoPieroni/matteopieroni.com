@@ -4,6 +4,7 @@ import GliderComponent from 'react-glider-carousel';
 
 import { Project } from './Project';
 import { Website } from './Website';
+import { ResponsiveGrid } from './SharedStyles/ResponsiveGrid';
 
 interface ICompany {
   name: string;
@@ -44,7 +45,7 @@ const StyledDiv = styled.div`
   p {
     white-space: pre-wrap;
   }
-  h5 {
+  h4 {
     margin-top: 1.5rem;
     margin-bottom: 0;
   }
@@ -112,11 +113,11 @@ export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
       {company.listOfLinks && (
         <div>
           <h4>Examples of realised websites</h4>
-          <div>
+          <ResponsiveGrid>
             {company.listOfLinks.map(link => (
               <Website key={link.link} link={link.link} image={link.image} />
             ))}
-          </div>
+          </ResponsiveGrid>
         </div>
       )}
     </StyledDiv>

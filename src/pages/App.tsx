@@ -12,6 +12,7 @@ import { WorkTimeline } from '../components/WorkTimeline';
 import { PersonalProjects } from '../components/PersonalProjects';
 import ExternalLinkIcon from '../assets/external-link-icon.svg';
 import { ThemeChanger } from '../components/ThemeChanger';
+import { Footer } from '../components/Footer';
 
 export interface IStyledProps {
   theme: {
@@ -247,6 +248,7 @@ export const App: React.FunctionComponent = () => {
             <TechnologiesBar />
             <WorkTimeline />
             <PersonalProjects />
+            <Footer />
           </StyledApp>
         </>
       )}

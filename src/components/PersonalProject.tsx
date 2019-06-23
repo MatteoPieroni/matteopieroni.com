@@ -19,6 +19,8 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: 1.5rem;
+  border-top: 3.5px solid
+    ${(props: IStyledProps) => props.theme.colors.secondary};
   border-radius: 5px;
   background: ${(props: IStyledProps) => props.theme.colors.card};
   .body,
