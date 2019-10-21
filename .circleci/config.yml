@@ -8,6 +8,7 @@ executors:
     docker:
       - image: circleci/node:8
 
+aliases:
   install_node_modules: &install_node_modules
     run:
       name: Install dependencies
