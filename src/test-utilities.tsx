@@ -10,6 +10,7 @@ export const mockTheme: DefaultTheme = {
     primaryLighter: '#fe5f55',
     card: '#0e1325',
     background: '#293462',
+    backgroundLighter: '#eee',
     text: '#fff',
     secondary: '#a64942',
   },

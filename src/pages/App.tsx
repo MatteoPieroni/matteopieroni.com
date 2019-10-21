@@ -12,6 +12,7 @@ import { WorkTimeline } from '../components/WorkTimeline';
 import { PersonalProjects } from '../components/PersonalProjects';
 import ExternalLinkIcon from '../assets/external-link-icon.svg';
 import { ThemeChanger } from '../components/ThemeChanger';
+import { Footer } from '../components/Footer';
 
 export interface IStyledProps {
   theme: {
@@ -24,6 +25,7 @@ export interface IStyledProps {
       primaryLighter: string;
       card: string;
       background: string;
+      backgroundLighter: string;
       text: string;
       secondary: string;
     };
@@ -36,8 +38,9 @@ export const lightTheme: DefaultTheme = {
   colors: {
     primary: '#a64942',
     primaryLighter: '#fe5f55',
-    card: '#fff',
+    card: '#eee',
     background: '#fff',
+    backgroundLighter: '#dcdcdc',
     text: '#333',
     secondary: '#293462',
   },
@@ -51,6 +54,7 @@ export const darkTheme: DefaultTheme = {
     primaryLighter: '#fe5f55',
     card: '#0e1325',
     background: '#293462',
+    backgroundLighter: '#4a588c',
     text: '#fff',
     secondary: '#a64942',
   },
@@ -82,18 +86,58 @@ const GlobalStyle = createGlobalStyle`
   }
   h2 {
     font-size: 1.7rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
   }
   h3 {
     font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2.25rem;
+    }
   }
   h4 {
     font-size: 1.4rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.9rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
   }
   h5 {
     font-size: 1.3rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.9rem;
+    } 
   }
   h6 {
     font-size: 1.2rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.8rem;
+    }
   }
 
   a {
@@ -133,6 +177,16 @@ const GlobalStyle = createGlobalStyle`
   .full-width {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
+
+    @media (min-width: 768px) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      margin-left: calc((100vw - 1200px) / -2);
+      margin-right: calc((100vw - 1200px) / -2);
+    }
   }
 
   .sr-only {
@@ -152,31 +206,52 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledApp = styled.main`
   margin: 0 0.5rem;
+
+  @media (min-width: 768px) {
+    margin: 0 1.5rem;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 `;
 
 export const App: React.FunctionComponent = () => {
   const [theme, setTheme] = React.useState(darkTheme);
+  const [readingTheme, setReadingTheme] = React.useState(true);
+
+  React.useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'LIGHT') setTheme(lightTheme);
+    setReadingTheme(false);
+  }, [theme]);
 
   const changeTheme = (isChecked: boolean) => {
     const whichTheme = isChecked ? darkTheme : lightTheme;
+    const themeToLS = isChecked ? 'DARK' : 'LIGHT';
     setTheme(whichTheme);
+    localStorage.setItem('theme', themeToLS);
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <>
-        <GlobalStyle />
-        <StyledApp>
-          <ThemeChanger
-            changeTheme={changeTheme}
-            isDarkTheme={theme === lightTheme ? true : false}
-          />
-          <Hero />
-          <TechnologiesBar />
-          <WorkTimeline />
-          <PersonalProjects />
-        </StyledApp>
-      </>
+      {!readingTheme && (
+        <>
+          <GlobalStyle />
+          <StyledApp>
+            <ThemeChanger
+              changeTheme={changeTheme}
+              isDarkTheme={theme === lightTheme ? true : false}
+            />
+            <Hero />
+            <TechnologiesBar />
+            <WorkTimeline />
+            <PersonalProjects />
+            <Footer />
+          </StyledApp>
+        </>
+      )}
     </ThemeProvider>
   );
 };

@@ -27,12 +27,33 @@ const StyledDiv = styled.div`
   background: ${(props: IStyledProps) => props.theme.colors.primary};
 `;
 
+const responsiveGliderSettings = [
+  {
+    breakpoint: 767.5,
+    settings: {
+      slidesToShow: 3,
+    },
+  },
+  {
+    breakpoint: 1200,
+    settings: {
+      slidesToShow: 4,
+    },
+  },
+];
+
 export const TechnologiesBar: React.FunctionComponent = () => {
   return (
     <StyledSection className="full-width">
       <h2>Technologies</h2>
       <StyledDiv>
-        <GliderComponent settings={{ slidesToShow: 2, draggable: true }}>
+        <GliderComponent
+          settings={{
+            slidesToShow: 2,
+            draggable: true,
+            responsive: responsiveGliderSettings,
+          }}
+        >
           <Html5 />
           <Css3 />
           <JS />

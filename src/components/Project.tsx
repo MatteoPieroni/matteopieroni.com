@@ -10,11 +10,13 @@ interface IProjectProps {
 
 const StyledProject = styled.div`
   margin: 1rem;
+  border-top: 3.5px solid
+    ${(props: IStyledProps) => props.theme.colors.secondary};
   border-radius: 5px;
   padding: 1rem;
-  background: ${(props: IStyledProps) => props.theme.colors.card}
+  background: ${(props: IStyledProps) => props.theme.colors.card};
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
-  h4 {
+  h5 {
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
@@ -31,7 +33,7 @@ export const Project: React.FunctionComponent<IProjectProps> = ({
 }) => {
   return (
     <StyledProject tabIndex={0}>
-      <h4>{title}</h4>
+      <h5>{title}</h5>
       <p>{text}</p>
       {topics && (
         <div>
