@@ -2,30 +2,72 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
-jobs:
-  build:
+
+executors:
+  node:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:latest
+      - image: circleci/node:8
 
-    working_directory: ~/repo
+  install_node_modules: &install_node_modules
+    run:
+      name: Install dependencies
+      command: yarn
 
+version: 2.1
+
+jobs:
+  test:
+    executor: node
     steps:
       - checkout
-      - run: yarn install
-      - run: yarn test-ci
-      - run: yarn build
-      - run: node .circleci/deploy.js
+      - <<: *install_node_modules
+      - run:
+          name: Test
+          command: yarn test-ci
       - store_test_results:
           path: test-results
 
+  build:
+    executor: node
+    steps:
+      - checkout
+      - <<: *install_node_modules
+      - run:
+          name: Build
+          command: yarn build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - dist
+
+  deploy:
+    executor: node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./
+      - <<: *install_node_modules
+      - run:
+          name: Install netlify-cli
+          command: sudo npm install -g --silent netlify-cli
+      - run:
+          name: Deploy to Netlify
+          command: netlify deploy --dir=./dist -p
+
 workflows:
   version: 2
-  deploy:
+  build_and_deploy:
     jobs:
-      - build:
+      - test:
           filters:
             branches:
-              only:
-                - master
+              only: master
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
