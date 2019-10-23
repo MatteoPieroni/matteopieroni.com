@@ -10,7 +10,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server -d --open",
-    "lint": "eslint 'src/**'",
+    "lint": "eslint --ext .ts --ext .tsx --ext .js src/**",
     "test": "jest",
     "test-ci": "jest --ci --runInBand --reporters=default --reporters=jest-junit"
   },
