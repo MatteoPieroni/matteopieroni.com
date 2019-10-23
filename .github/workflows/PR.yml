@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Install
         run: yarn
-      - name: Lint
-        run: yarn lint
+      # - name: Lint
+      #   run: yarn lint
       - name: Test
         run: yarn test
