@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const JQuery: React.FunctionComponent = props => {
+export const JQuery: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="jquery-logo" tabIndex={0}>

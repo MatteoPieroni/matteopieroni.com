@@ -217,7 +217,7 @@ const StyledApp = styled.main`
   }
 `;
 
-export const App: React.FunctionComponent = () => {
+export const App: () => JSX.Element = () => {
   const [theme, setTheme] = React.useState(darkTheme);
   const [readingTheme, setReadingTheme] = React.useState(true);
 

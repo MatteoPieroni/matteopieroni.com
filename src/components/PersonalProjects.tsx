@@ -22,7 +22,7 @@ const StyledDiv = styled(ResponsiveGrid)`
   }
 `;
 
-export const PersonalProjects: React.FunctionComponent = () => {
+export const PersonalProjects: () => JSX.Element = () => {
   return (
     <section>
       <StyledDiv>

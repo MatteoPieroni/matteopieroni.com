@@ -39,9 +39,9 @@ const StyledDiv = styled.div`
   }
 `;
 
-export const PersonalProject: React.FunctionComponent<
-  IPersonalProjectProps
-> = ({ project }) => {
+export const PersonalProject: (props: IPersonalProjectProps) => JSX.Element = ({
+  project,
+}) => {
   return (
     <StyledDiv>
       <div className="body">

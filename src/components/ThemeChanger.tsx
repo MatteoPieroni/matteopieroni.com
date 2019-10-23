@@ -215,9 +215,9 @@ const StyledDiv = styled.div`
   }
 `;
 
-export const ThemeChanger: React.FunctionComponent<
-  IThemeChangerProps
-> = props => {
+export const ThemeChanger: (
+  props: IThemeChangerProps
+) => JSX.Element = props => {
   return (
     <StyledDiv className="toggleWrapper">
       <input

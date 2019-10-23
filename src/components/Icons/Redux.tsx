@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Redux: React.FunctionComponent = () => {
+export const Redux: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="redux-logo" tabIndex={0}>

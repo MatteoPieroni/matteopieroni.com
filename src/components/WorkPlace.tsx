@@ -75,7 +75,7 @@ const responsiveGliderSettings = [
   },
 ];
 
-export const WorkPlace: React.FunctionComponent<IWorkPlaceProps> = ({
+export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
   company,
 }) => {
   return (

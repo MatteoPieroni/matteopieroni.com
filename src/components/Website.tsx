@@ -38,7 +38,7 @@ const StyledWebsite = styled.div`
   }
 `;
 
-export const Website: React.FunctionComponent<IWebsiteProps> = ({
+export const Website: (props: IWebsiteProps) => JSX.Element = ({
   link,
   image,
 }) => {

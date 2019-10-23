@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const LinkedIn: React.FunctionComponent = () => {
+export const LinkedIn: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="linkedin-logo" tabIndex={0}>
