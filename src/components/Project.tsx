@@ -26,7 +26,7 @@ const StyledProject = styled.div`
   }
 `;
 
-export const Project: React.FunctionComponent<IProjectProps> = ({
+export const Project: (props: IProjectProps) => JSX.Element = ({
   title,
   text,
   topics,

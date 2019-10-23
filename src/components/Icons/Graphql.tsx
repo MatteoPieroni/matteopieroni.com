@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const GraphQL: React.FunctionComponent = props => {
+export const GraphQL: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="graphql-logo" tabIndex={0}>

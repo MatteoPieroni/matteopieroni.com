@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Angular: React.FunctionComponent = () => {
+export const Angular: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="angular-logo" tabIndex={0}>

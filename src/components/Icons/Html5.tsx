@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Html5: React.FunctionComponent = () => {
+export const Html5: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="html-logo" tabIndex={0}>

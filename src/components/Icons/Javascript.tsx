@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const JS: React.FunctionComponent = props => {
+export const JS: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="javascript-logo" tabIndex={0}>

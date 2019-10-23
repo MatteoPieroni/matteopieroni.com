@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Mail: React.FunctionComponent = () => {
+export const Mail: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="email-logo" tabIndex={0}>

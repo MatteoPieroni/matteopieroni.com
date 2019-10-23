@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Css3: React.FunctionComponent = () => {
+export const Css3: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="css-logo" tabIndex={0}>

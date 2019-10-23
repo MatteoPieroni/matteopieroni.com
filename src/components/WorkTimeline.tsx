@@ -12,7 +12,7 @@ const StyledSection = styled.section`
   }
 `;
 
-export const WorkTimeline: React.FunctionComponent = () => {
+export const WorkTimeline: () => JSX.Element = () => {
   return (
     <StyledSection>
       <h2>Work experience</h2>

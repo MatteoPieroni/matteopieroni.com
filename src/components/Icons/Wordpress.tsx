@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Wordpress: React.FunctionComponent = () => {
+export const Wordpress: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="wordpress-logo" tabIndex={0}>

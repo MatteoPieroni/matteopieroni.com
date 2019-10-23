@@ -42,7 +42,7 @@ const responsiveGliderSettings = [
   },
 ];
 
-export const TechnologiesBar: React.FunctionComponent = () => {
+export const TechnologiesBar: () => JSX.Element = () => {
   return (
     <StyledSection className="full-width">
       <h2>Technologies</h2>

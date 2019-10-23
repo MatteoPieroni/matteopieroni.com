@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledIcon } from './StyledIcon';
 
-export const Drupal: React.FunctionComponent = props => {
+export const Drupal: () => JSX.Element = () => {
   return (
     <StyledIcon>
       <label htmlFor="drupal-logo" tabIndex={0}>

@@ -41,7 +41,7 @@ const StyledFooter = styled.footer`
   }
 `;
 
-export const Footer: React.FunctionComponent = () => {
+export const Footer: () => JSX.Element = () => {
   return (
     <StyledFooter className="full-width">
       <h2>Where to find me?</h2>
