@@ -1,5 +1,21 @@
 export const projects = [
   {
+    name: 'Refresh NPM Packages extension',
+    url:
+      'https://marketplace.visualstudio.com/items?itemName=matteopieroni.refresh-npm-packages',
+    sourceUrl: 'https://github.com/MatteoPieroni/refresh-npm-packages',
+    description:
+      'A VS Code extension that warns the user when the lock file for NPM dependencies has been updated as the result of a GIT operation.',
+  },
+  {
+    name: 'Inspect API extension',
+    url:
+      'https://chrome.google.com/webstore/detail/inspect-api-calls/peblgjafllfpndniijaemianngmokbcf/',
+    sourceUrl: 'https://github.com/MatteoPieroni/inspect-api-extension',
+    description:
+      'A Chrome extension that lets the user inspect the API calls made by a web page. It can be used to filter, find duplicates, find insecure calls, and more.',
+  },
+  {
     name: 'Blurred Background Images',
     url:
       'https://github.com/MatteoPieroni/create-blurred-background-images/blob/master/release-builds/Blurred-Background-Images-win32-x64.zip',
@@ -11,7 +27,6 @@ export const projects = [
   },
   {
     name: 'Your next movie!',
-    url: 'https://matteopieroni.com/your-next-movie/',
     sourceUrl: 'https://github.com/MatteoPieroni/your-next-movie',
     description:
       'A small website that uses the TMDb API to output the upcoming 20 movies in the UK. It uses React hooks and styled-components.',
@@ -21,7 +36,7 @@ export const projects = [
     url: 'https://www.npmjs.com/package/react-glider-carousel',
     sourceUrl: 'https://github.com/MatteoPieroni/react-glider-carousel',
     description:
-      "A React Component packaged in NPM. It wraps the library Glider.js, using Typescript and it's used on this website.",
+      'A React Component packaged in NPM. It wraps the library Glider.js, using Typescript and is used on this website.',
   },
   {
     name: 'Acest',
