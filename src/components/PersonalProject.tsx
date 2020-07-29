@@ -5,9 +5,9 @@ import { IStyledProps } from '../pages/App';
 export interface IPersonalProject {
   name: string;
   description: string;
-  url: string;
+  url?: string;
   noteOnUrl?: string;
-  sourceUrl: string;
+  sourceUrl?: string;
 }
 
 interface IPersonalProjectProps {
@@ -45,19 +45,29 @@ export const PersonalProject: (props: IPersonalProjectProps) => JSX.Element = ({
   return (
     <StyledDiv>
       <div className="body">
-        <a href={project.url} target="_blank">
-          <h6>{project.name}</h6>
-        </a>
+				{project.url ? (
+					<a href={project.url} target="_blank">
+          	<h6>{project.name}</h6>
+        	</a>
+				) : (
+					<h6>{project.name}</h6>
+				)}
         <p>{project.description}</p>
       </div>
       <div className="footer">
-        <a href={project.url} target="_blank">
-          See project {project.noteOnUrl && `(${project.noteOnUrl})`}
-        </a>
-        <br />
-        <a href={project.sourceUrl} target="_blank">
-          Source on Github
-        </a>
+				{project.url ?
+					<a href={project.url} target="_blank">
+						See project {project.noteOnUrl && `(${project.noteOnUrl})`}
+					</a> :
+					<br />
+				}
+        {project.url && project.sourceUrl && <br />}
+				{project.sourceUrl ?
+					<a href={project.sourceUrl} target="_blank">
+						Source on Github
+					</a> :
+					<br />
+				}
       </div>
     </StyledDiv>
   );
