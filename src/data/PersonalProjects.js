@@ -27,7 +27,7 @@ export const projects = [
   },
   {
     name: 'Your next movie!',
-    sourceUrl: 'https://github.com/MatteoPieroni/your-next-movie',
+    url: 'https://github.com/MatteoPieroni/your-next-movie',
     description:
       'A small website that uses the TMDb API to output the upcoming 20 movies in the UK. It uses React hooks and styled-components.',
   },

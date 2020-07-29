@@ -222,15 +222,21 @@ export const App: () => JSX.Element = () => {
   const [readingTheme, setReadingTheme] = React.useState(true);
 
   React.useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'LIGHT') setTheme(lightTheme);
+		const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'LIGHT') {
+			setTheme(lightTheme);
+		}
+
     setReadingTheme(false);
   }, [theme]);
 
   const changeTheme = (isChecked: boolean) => {
     const whichTheme = isChecked ? darkTheme : lightTheme;
-    const themeToLS = isChecked ? 'DARK' : 'LIGHT';
-    setTheme(whichTheme);
+		const themeToLS = isChecked ? 'DARK' : 'LIGHT';
+
+		setTheme(whichTheme);
+
     localStorage.setItem('theme', themeToLS);
   };
 

@@ -5,7 +5,7 @@ import { IStyledProps } from '../pages/App';
 export interface IPersonalProject {
   name: string;
   description: string;
-  url?: string;
+  url: string;
   noteOnUrl?: string;
   sourceUrl?: string;
 }
