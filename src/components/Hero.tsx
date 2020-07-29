@@ -43,7 +43,10 @@ const StyledHero = styled.section`
     @media (min-width: 1024px) {
       font-size: 3.5rem;
     }
-  }
+	}
+	picture {
+		width: 100%;
+	}
   img {
     display: block;
     width: 100%;

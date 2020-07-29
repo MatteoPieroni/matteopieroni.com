@@ -58,19 +58,19 @@ const responsiveGliderSettings = [
   {
     breakpoint: 767.5,
     settings: {
-      slidesToShow: 2,
+      slidesToShow: 2.25,
     },
   },
   {
     breakpoint: 1024,
     settings: {
-      slidesToShow: 3,
+      slidesToShow: 3.25,
     },
   },
   {
     breakpoint: 1200,
     settings: {
-      slidesToShow: 4,
+      slidesToShow: 4.25,
     },
   },
 ];
@@ -95,7 +95,8 @@ export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
             <GliderComponent
               settings={{
                 draggable: true,
-                responsive: responsiveGliderSettings,
+								responsive: responsiveGliderSettings,
+								slidesToShow: 1.25,
               }}
             >
               {company.projects.map(project => (

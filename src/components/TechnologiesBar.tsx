@@ -31,13 +31,13 @@ const responsiveGliderSettings = [
   {
     breakpoint: 767.5,
     settings: {
-      slidesToShow: 3,
+      slidesToShow: 4.5,
     },
   },
   {
     breakpoint: 1200,
     settings: {
-      slidesToShow: 4,
+      slidesToShow: 6.5,
     },
   },
 ];
