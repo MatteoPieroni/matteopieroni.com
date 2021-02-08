@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-// import GliderComponent from 'react-glider-carousel';
 
 import { Css3 } from './Icons/Css3';
 import { Angular } from './Icons/Angular';
@@ -47,24 +46,18 @@ export const TechnologiesBar: () => JSX.Element = () => {
     <StyledSection className="full-width">
       <h2>Technologies</h2>
       <StyledDiv>
-        {/* <GliderComponent
-          settings={{
-            slidesToShow: 2,
-            draggable: true,
-            responsive: responsiveGliderSettings,
-          }}
-        >
-          <Html5 />
-          <Css3 />
-          <JS />
-          <ReactLogo />
-          <Redux />
-          <Angular />
-          <GraphQL />
-          <Drupal />
-          <JQuery />
-          <Wordpress />
-        </GliderComponent> */}
+        <ul>
+          <li><Html5 /></li>
+          <li><Css3 /></li>
+          <li><JS /></li>
+          <li><ReactLogo /></li>
+          <li><Redux /></li>
+          <li><Angular /></li>
+          <li><GraphQL /></li>
+          <li><Drupal /></li>
+          <li><JQuery /></li>
+          <li><Wordpress /></li>
+        </ul>
       </StyledDiv>
     </StyledSection>
   );

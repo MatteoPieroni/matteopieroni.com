@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-// import GliderComponent from 'react-glider-carousel';
 
 import { Project } from './Project';
 import { Website } from './Website';
@@ -92,22 +91,17 @@ export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
         <div>
           <h4>Most interesting projects</h4>
           <div className="full-width">
-            {/* <GliderComponent
-              settings={{
-                draggable: true,
-								responsive: responsiveGliderSettings,
-								slidesToShow: 1.25,
-              }}
-            >
+            <ul>
               {company.projects.map(project => (
-                <Project
-                  title={project.projectTitle}
-                  text={project.text}
-                  topics={project.topics}
-                  key={project.projectTitle}
-                />
+                <li key={project.projectTitle}>
+                  <Project
+                    title={project.projectTitle}
+                    text={project.text}
+                    topics={project.topics}
+                  />
+                </li>
               ))}
-            </GliderComponent> */}
+            </ul>
           </div>
         </div>
       )}
