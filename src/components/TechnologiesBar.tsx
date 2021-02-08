@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import GliderComponent from 'react-glider-carousel';
+// import GliderComponent from 'react-glider-carousel';
 
 import { Css3 } from './Icons/Css3';
 import { Angular } from './Icons/Angular';
@@ -12,7 +12,7 @@ import { JQuery } from './Icons/Jquery';
 import { ReactLogo } from './Icons/React';
 import { Redux } from './Icons/Redux';
 import { Wordpress } from './Icons/Wordpress';
-import { IStyledProps } from '../pages/App';
+import { IStyledProps } from '../utils/theme';
 
 const StyledSection = styled.section`
   margin-top: 2.5rem;
@@ -47,7 +47,7 @@ export const TechnologiesBar: () => JSX.Element = () => {
     <StyledSection className="full-width">
       <h2>Technologies</h2>
       <StyledDiv>
-        <GliderComponent
+        {/* <GliderComponent
           settings={{
             slidesToShow: 2,
             draggable: true,
@@ -64,7 +64,7 @@ export const TechnologiesBar: () => JSX.Element = () => {
           <Drupal />
           <JQuery />
           <Wordpress />
-        </GliderComponent>
+        </GliderComponent> */}
       </StyledDiv>
     </StyledSection>
   );

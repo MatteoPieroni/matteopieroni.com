@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import { TechnologiesBar } from '../TechnologiesBar';
-import GliderComponent from 'react-glider-carousel';
+// import GliderComponent from 'react-glider-carousel';
 import { mountWithTheme, mockTheme } from '../../test-utilities';
 
 describe('TechnologiesBar mounted', () => {
@@ -23,7 +23,7 @@ describe('TechnologiesBar mounted', () => {
   it('returns at least one label', () => {
     expect(wrapper.find('label').length).toBeGreaterThanOrEqual(1);
   });
-  it('returns a GliderComponent', () => {
-    expect(wrapper.containsMatchingElement(<GliderComponent />));
-  });
+  // it('returns a GliderComponent', () => {
+  //   // expect(wrapper.containsMatchingElement(<GliderComponent />));
+  // });
 });

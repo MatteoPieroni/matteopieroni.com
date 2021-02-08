@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { IStyledProps } from '../pages/App';
+import { IStyledProps } from '../utils/theme';
 import { LinkedIn } from './Icons/LinkedIn';
 import { Mail } from './Icons/Mail';
 

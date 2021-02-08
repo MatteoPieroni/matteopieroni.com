@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import GliderComponent from 'react-glider-carousel';
+// import GliderComponent from 'react-glider-carousel';
 
 import { Project } from './Project';
 import { Website } from './Website';
@@ -92,7 +92,7 @@ export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
         <div>
           <h4>Most interesting projects</h4>
           <div className="full-width">
-            <GliderComponent
+            {/* <GliderComponent
               settings={{
                 draggable: true,
 								responsive: responsiveGliderSettings,
@@ -107,7 +107,7 @@ export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
                   key={project.projectTitle}
                 />
               ))}
-            </GliderComponent>
+            </GliderComponent> */}
           </div>
         </div>
       )}

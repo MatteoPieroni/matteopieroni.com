@@ -4,33 +4,16 @@ import styled, {
   DefaultTheme,
   createGlobalStyle,
 } from 'styled-components';
-import '../lib/glider.min.css';
+// import '../lib/glider.min.css';
 
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
 import { WorkTimeline } from '../components/WorkTimeline';
 import { PersonalProjects } from '../components/PersonalProjects';
-import ExternalLinkIcon from '../assets/external-link-icon.svg';
+// import ExternalLinkIcon from '../assets/external-link-icon.svg';
 import { ThemeChanger } from '../components/ThemeChanger';
 import { Footer } from '../components/Footer';
-
-export interface IStyledProps {
-  theme: {
-    boxShadow?: string;
-    photoGradient: string;
-    grayscale: boolean;
-
-    colors: {
-      primary: string;
-      primaryLighter: string;
-      card: string;
-      background: string;
-      backgroundLighter: string;
-      text: string;
-      secondary: string;
-    };
-  };
-}
+import { IStyledProps } from '../utils/theme';
 
 export const lightTheme: DefaultTheme = {
   photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
@@ -163,7 +146,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   a:not([href*='matteopieroni.com']):not([href^='#']):not([href^='/']) {
-    background-image: url(${ExternalLinkIcon});
+    // background-image: url();
     background-origin: center;
     background-position: center right;
     background-repeat: no-repeat;
