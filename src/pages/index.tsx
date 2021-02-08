@@ -4,7 +4,6 @@ import styled, {
   DefaultTheme,
   createGlobalStyle,
 } from 'styled-components';
-// import '../lib/glider.min.css';
 
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
@@ -32,6 +31,7 @@ export const lightTheme: DefaultTheme = {
 export const darkTheme: DefaultTheme = {
   photoGradient: 'linear-gradient(0.5turn, #000, transparent)',
   grayscale: true,
+  filter: 5,
   colors: {
     primary: '#fff',
     primaryLighter: '#fe5f55',
@@ -129,6 +129,7 @@ const GlobalStyle = createGlobalStyle`
     padding-right: 1.2rem;
     color: ${(props: IStyledProps) => props.theme.colors.text};
     text-decoration: none;
+
     &:before {
       content: '';
       position: absolute;
@@ -140,17 +141,27 @@ const GlobalStyle = createGlobalStyle`
       z-index: -1;
       transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     &:hover:before,
     &:focus:before {
       height: 0.25rem;
+      z-index: 0;
     }
   }
-  a:not([href*='matteopieroni.com']):not([href^='#']):not([href^='/']) {
+
+  a:not([href*='matteopieroni.com']):not([href^='#']):not([href^='/']):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
     background-image: url(${ExternalLinkIcon});
     background-origin: center;
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 1rem;
+    filter: ${(props: IStyledProps) => props.theme.filter ? 'brightness(' + props.theme.filter + ')' : 'none'};
   }
 
   *:focus {
@@ -167,8 +178,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @media (min-width: 1200px) {
-      margin-left: calc((100vw - 1200px) / -2);
-      margin-right: calc((100vw - 1200px) / -2);
+      margin-left: calc((99vw - 1200px) / -2);
+      margin-right: calc((99vw - 1200px) / -2);
     }
   }
 

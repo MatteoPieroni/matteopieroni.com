@@ -1,3 +1,11 @@
+import locanda from '../assets/website-locanda-francigena-matteo-pieroni.jpg';
+import memphremagog from '../assets/website-memphremagog-matteo-pieroni.jpg';
+import made from '../assets/website-made-in-lucca-matteo-pieroni.jpg';
+import mia from '../assets/website-mia-bama-bag-matteo-pieroni.jpg';
+import tecnoservice from '../assets/website-tecnoservice-lucca-matteo-pieroni.jpg';
+import rctt from '../assets/website-rctt-matteo-pieroni.jpg';
+import est from '../assets/website-est-matteo-pieroni.jpg';
+
 export const Workplaces = [
   {
     name: 'Zone Digital',
@@ -57,31 +65,31 @@ export const Workplaces = [
     listOfLinks: [
       {
         link: 'http://www.lalocandafrancigena.it',
-        image: 'website-locanda-francigena-matteo-pieroni.jpg',
+        image: locanda,
       },
       {
         link: 'http://www.memphremagog.it',
-        image: 'website-memphremagog-matteo-pieroni.jpg',
+        image: memphremagog,
       },
       {
         link: 'http://madeinlucca.it',
-        image: 'website-made-in-lucca-matteo-pieroni.jpg',
+        image: made,
       },
       {
         link: 'https://www.miabamabag.it',
-        image: 'website-mia-bama-bag-matteo-pieroni.jpg',
+        image: mia,
       },
       {
         link: 'http://www.tecnoservice.lucca.it',
-        image: 'website-tecnoservice-lucca-matteo-pieroni.jpg',
+        image: tecnoservice,
       },
       {
         link: 'http://www.rctabletop.it',
-        image: 'website-rctt-matteo-pieroni.jpg',
+        image: rctt,
       },
       {
         link: 'http://www.eventservicetuscany.it',
-        image: 'website-est-matteo-pieroni.jpg',
+        image: est,
       },
     ],
   },

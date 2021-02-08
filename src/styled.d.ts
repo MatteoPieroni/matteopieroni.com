@@ -6,6 +6,7 @@ declare module 'styled-components' {
 
     photoGradient: string;
     grayscale: boolean;
+    filter?: number;
 
     colors: {
       primary: string;

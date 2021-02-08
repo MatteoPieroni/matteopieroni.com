@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { IStyledProps } from '../pages/App';
+import { IStyledProps } from '../utils/theme';
 
 interface IWebsiteProps {
   link: string;
@@ -42,12 +42,11 @@ export const Website: (props: IWebsiteProps) => JSX.Element = ({
   link,
   image,
 }) => {
-  const img = require(`../assets/${image}`);
   return (
     <StyledWebsite>
       <a href={link} target="_blank" className="img-link">
         <picture>
-          <img src={img} />
+          <img src={image} />
         </picture>
       </a>
       <p className="footer">
