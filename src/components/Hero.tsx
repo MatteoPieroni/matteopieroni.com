@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import mobileImage from '../assets/matteo-pieroni-front-end-developer-640.jpg';
 import tabletImage from '../assets/matteo-pieroni-front-end-developer-960.jpg';
 import desktopImage from '../assets/matteo-pieroni-front-end-developer-1920.jpg';
-import { IStyledProps } from '../pages/App';
+import { IStyledProps } from '../utils/theme';
 
 const StyledHero = styled.section`
   .text {
