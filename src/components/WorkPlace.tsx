@@ -44,35 +44,29 @@ const StyledDiv = styled.div`
   p {
     white-space: pre-wrap;
   }
+
   h4 {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     margin-bottom: 0;
   }
-  .glider-track {
-    padding: 0 calc((100vw - 1200px) / 2);
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1500px;
+    list-style: none;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 `;
-
-const responsiveGliderSettings = [
-  {
-    breakpoint: 767.5,
-    settings: {
-      slidesToShow: 2.25,
-    },
-  },
-  {
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3.25,
-    },
-  },
-  {
-    breakpoint: 1200,
-    settings: {
-      slidesToShow: 4.25,
-    },
-  },
-];
 
 export const WorkPlace: (props: IWorkPlaceProps) => JSX.Element = ({
   company,
