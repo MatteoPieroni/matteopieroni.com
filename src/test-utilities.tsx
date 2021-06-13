@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { mount, render, shallow } from 'enzyme';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 
 export const mockTheme: DefaultTheme = {
@@ -15,12 +14,3 @@ export const mockTheme: DefaultTheme = {
     secondary: '#a64942',
   },
 };
-
-export const mountWithTheme = (children: any, theme: DefaultTheme) =>
-  mount(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
-
-export const renderWithTheme = (children: any, theme: DefaultTheme) =>
-  render(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
-
-export const shallowWithTheme = (children: any, theme: DefaultTheme) =>
-  shallow(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
