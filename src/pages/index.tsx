@@ -4,6 +4,7 @@ import styled, {
   DefaultTheme,
   createGlobalStyle,
 } from 'styled-components';
+import Head from 'next/head';
 
 import { Hero } from '../components/Hero';
 import { TechnologiesBar } from '../components/TechnologiesBar';
@@ -48,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background: ${(props: IStyledProps) => props.theme.colors.background};
     font-family: 'Source Sans Pro', Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans',  'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-display: swap;
     font-weight: 400;
   }
   h3,
@@ -236,6 +238,10 @@ export const App: () => JSX.Element = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Matteo Pieroni, Front End Developer in London</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {!readingTheme && (
         <>
           <GlobalStyle />
