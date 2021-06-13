@@ -46,7 +46,7 @@ export const Footer: () => JSX.Element = () => {
     <StyledFooter className="full-width">
       <h2>Where to find me?</h2>
       <div className="social">
-        <a href="https://www.linkedin.com/in/pieronimatteo/">
+        <a href="https://www.linkedin.com/in/pieronimatteo/" target="_blank" rel="noopener noreferrer">
           <LinkedIn />
         </a>
         <a href="mailto:matteopieroni6@gmail.com">

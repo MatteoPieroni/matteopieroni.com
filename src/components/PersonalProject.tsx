@@ -46,7 +46,7 @@ export const PersonalProject: (props: IPersonalProjectProps) => JSX.Element = ({
     <StyledDiv>
       <div className="body">
 				{project.url ? (
-					<a href={project.url} target="_blank">
+					<a href={project.url} target="_blank" rel="noopener noreferrer">
           	<h6>{project.name}</h6>
         	</a>
 				) : (
@@ -56,14 +56,14 @@ export const PersonalProject: (props: IPersonalProjectProps) => JSX.Element = ({
       </div>
       <div className="footer">
 				{project.url ?
-					<a href={project.url} target="_blank">
+					<a href={project.url} target="_blank" rel="noopener noreferrer">
 						See project {project.noteOnUrl && `(${project.noteOnUrl})`}
 					</a> :
 					<br />
 				}
         {project.url && project.sourceUrl && <br />}
 				{project.sourceUrl ?
-					<a href={project.sourceUrl} target="_blank">
+					<a href={project.sourceUrl} target="_blank" rel="noopener noreferrer">
 						Source on Github
 					</a> :
 					<br />
