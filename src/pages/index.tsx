@@ -113,7 +113,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.9rem;
     } 
   }
-  h6 {
+  h3 {
     font-size: 1.2rem;
 
     @media (min-width: 768px) {

@@ -33,7 +33,7 @@ const StyledDiv = styled.div`
     background: ${(props: IStyledProps) =>
       props.theme.colors.backgroundLighter};
   }
-  h6 {
+  h3 {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -47,10 +47,10 @@ export const PersonalProject: (props: IPersonalProjectProps) => JSX.Element = ({
       <div className="body">
 				{project.url ? (
 					<a href={project.url} target="_blank" rel="noopener noreferrer">
-          	<h6>{project.name}</h6>
+          	<h3>{project.name}</h3>
         	</a>
 				) : (
-					<h6>{project.name}</h6>
+					<h3>{project.name}</h3>
 				)}
         <p>{project.description}</p>
       </div>
