@@ -1,10 +1,10 @@
-import locanda from '../assets/website-locanda-francigena-matteo-pieroni.jpg';
-import memphremagog from '../assets/website-memphremagog-matteo-pieroni.jpg';
-import made from '../assets/website-made-in-lucca-matteo-pieroni.jpg';
-import mia from '../assets/website-mia-bama-bag-matteo-pieroni.jpg';
-import tecnoservice from '../assets/website-tecnoservice-lucca-matteo-pieroni.jpg';
-import rctt from '../assets/website-rctt-matteo-pieroni.jpg';
-import est from '../assets/website-est-matteo-pieroni.jpg';
+// import locanda from '../assets/website-locanda-francigena-matteo-pieroni.jpg';
+// import memphremagog from '../assets/website-memphremagog-matteo-pieroni.jpg';
+// import made from '../assets/website-made-in-lucca-matteo-pieroni.jpg';
+// import mia from '../assets/website-mia-bama-bag-matteo-pieroni.jpg';
+// import tecnoservice from '../assets/website-tecnoservice-lucca-matteo-pieroni.jpg';
+// import rctt from '../assets/website-rctt-matteo-pieroni.jpg';
+// import est from '../assets/website-est-matteo-pieroni.jpg';
 
 export const Workplaces = [
   {
@@ -65,31 +65,31 @@ export const Workplaces = [
     listOfLinks: [
       {
         link: 'http://www.lalocandafrancigena.it',
-        image: locanda,
+        // image: locanda,
       },
       {
         link: 'http://www.memphremagog.it',
-        image: memphremagog,
+        // image: memphremagog,
       },
       {
         link: 'http://madeinlucca.it',
-        image: made,
+        // image: made,
       },
       {
         link: 'https://www.miabamabag.it',
-        image: mia,
+        // image: mia,
       },
       {
         link: 'http://www.tecnoservice.lucca.it',
-        image: tecnoservice,
+        // image: tecnoservice,
       },
       {
         link: 'http://www.rctabletop.it',
-        image: rctt,
+        // image: rctt,
       },
       {
         link: 'http://www.eventservicetuscany.it',
-        image: est,
+        // image: est,
       },
     ],
   },

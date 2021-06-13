@@ -23,7 +23,7 @@ interface IProject {
 
 interface IWebsite {
   link: string;
-  image: string;
+  image?: string;
 }
 
 interface IWorkPlaceProps {

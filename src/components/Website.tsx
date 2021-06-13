@@ -44,11 +44,11 @@ export const Website: (props: IWebsiteProps) => JSX.Element = ({
 }) => {
   return (
     <StyledWebsite>
-      <a href={link} target="_blank" className="img-link">
+      {/* <a href={link} target="_blank" className="img-link">
         <picture>
           <img src={image} />
         </picture>
-      </a>
+      </a> */}
       <p className="footer">
         <a href={link} target="_blank">
           {link}
