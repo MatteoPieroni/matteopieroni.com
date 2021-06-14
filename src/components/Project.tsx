@@ -1,7 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { IStyledProps } from '../utils/theme';
-
 interface IProjectProps {
   title: string;
   text: string;
@@ -10,11 +8,10 @@ interface IProjectProps {
 
 const StyledProject = styled.div`
   margin: 1rem;
-  border-top: 3.5px solid
-    ${(props: IStyledProps) => props.theme.colors.secondary};
+  border-top: 3.5px solid #a64942;
   border-radius: 5px;
   padding: 1rem;
-  background: ${(props: IStyledProps) => props.theme.colors.card};
+  background: #0e1325;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
   h5 {
     margin-top: 0;

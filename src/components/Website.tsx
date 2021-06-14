@@ -11,8 +11,7 @@ const StyledWebsite = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  border-top: 3.5px solid
-    ${(props: IStyledProps) => props.theme.colors.secondary};
+  border-top: 3.5px solid #a64942;
 
   .img-link {
     border-radius: 5px;
@@ -33,8 +32,7 @@ const StyledWebsite = styled.div`
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 1rem;
-    background: ${(props: IStyledProps) =>
-      props.theme.colors.backgroundLighter};
+    background: #4a588c;
   }
 `;
 
