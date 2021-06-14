@@ -64,7 +64,7 @@
     "outputName": "./results.xml"
   },
   "dependencies": {
-    "next": "^10.0.6",
+    "next": "^10.2.3",
     "next-images": "^1.7.0"
   }
 }
