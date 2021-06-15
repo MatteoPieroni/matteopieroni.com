@@ -1,12 +1,14 @@
+
+import type { AppProps } from 'next/app'
+
+import { Header } from '../components/header/header';
+
 import './styles/general.scss';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (
 		<>
-			<header>
-				<a href="/">Home</a>
-				<a href="/work-experience">Work</a>
-			</header>
+			<Header />
 			<Component {...pageProps} />
 		</>
 	);

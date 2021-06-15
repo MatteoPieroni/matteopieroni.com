@@ -7,7 +7,9 @@ body {
     'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-display: swap;
   font-weight: 400;
+  font-size: 100%;
 }
+
 h3,
 h4,
 h5,
@@ -16,6 +18,7 @@ strong {
   font-weight: 700;
   color: #fff;
 }
+
 h1,
 h2 {
   font-family: 'Oswald', Frutiger, 'Frutiger Linotype', Univers, Calibri,
@@ -25,9 +28,11 @@ h2 {
   font-weight: 300;
   color: #fff;
 }
+
 p {
   color: #fff;
 }
+
 h2 {
   font-size: 1.7rem;
 
@@ -39,6 +44,7 @@ h2 {
     font-size: 3rem;
   }
 }
+
 h3 {
   font-size: 1.5rem;
 
@@ -50,6 +56,7 @@ h3 {
     font-size: 2.25rem;
   }
 }
+
 h4 {
   font-size: 1.4rem;
 
@@ -61,6 +68,7 @@ h4 {
     font-size: 2rem;
   }
 }
+
 h5 {
   font-size: 1.3rem;
 
@@ -72,6 +80,7 @@ h5 {
     font-size: 1.9rem;
   }
 }
+
 h3 {
   font-size: 1.2rem;
 
@@ -87,7 +96,6 @@ h3 {
 a {
   position: relative;
   display: inline-block;
-  padding-right: 1.2rem;
   color: #fff;
   text-decoration: none;
 
@@ -107,6 +115,10 @@ a {
   &:focus:before {
     height: 0.25rem;
     z-index: 0;
+  }
+
+  &[target='_blank'] {
+    padding-left: 1.2rem;
   }
 }
 
