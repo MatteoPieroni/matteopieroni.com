@@ -1,13 +1,8 @@
-import * as React from 'react';
-import styled from 'styled-components';
-
 import { PersonalProject, IPersonalProject } from '../personal-project/personal-project';
-import { projects } from '../../data/PersonalProjects';
-import { ResponsiveGrid } from '../SharedStyles/ResponsiveGrid';
 
 import styles from './personal-projects.module.scss';
 
-export const PersonalProjects: () => JSX.Element = () => {
+export const PersonalProjects: (props: { projects: IPersonalProject[] }) => JSX.Element = ({ projects }) => {
   return (
     <section>
       <div className={styles.PersonalProjectsGrid}>

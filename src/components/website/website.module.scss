@@ -1,0 +1,28 @@
+.website {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  border-top: 3.5px solid #a64942;
+
+  .img-link {
+    border-radius: 5px;
+    padding: 0;
+    background: none;
+    &:before {
+      content: none;
+    }
+  }
+  img {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .footer {
+    margin: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
+    background: #4a588c;
+  }
+}

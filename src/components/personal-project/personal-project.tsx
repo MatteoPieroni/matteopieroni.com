@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './PersonalProject.module.scss';
+import styles from './personal-project.module.scss';
 
 export interface IPersonalProject {
   name: string;
