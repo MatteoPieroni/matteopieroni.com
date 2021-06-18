@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  border-top: 3.5px solid #a64942;
+  border-radius: 5px;
+  background: #0e1325;
+}
+
+.body,
+.footer {
+  padding: 1rem;
+}
+
+.footer {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #4a588c;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+}

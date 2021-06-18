@@ -22,5 +22,6 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'prettier/prettier': 'error',
+    "linebreak-style": 0
   },
 };

@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #a64942;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  background: none !important;
+  padding: 0;
+  &:before {
+    content: none;
+  }
+}
+
+.svg {
+  margin-right: 1.5rem;
+  width: 50px;
+  fill: #fff;
+  &:last-child {
+    margin-right: 0;
+  }
+}

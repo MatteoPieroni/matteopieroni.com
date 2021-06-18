@@ -1,0 +1,26 @@
+.bar {
+  margin-top: 2.5rem;
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+.iconContainer {
+  background: #fff;
+}
