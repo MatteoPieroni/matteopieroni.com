@@ -41,7 +41,6 @@ export const App: () => JSX.Element = () => {
     <>
       <Head>
         <title>Matteo Pieroni, Front End Developer in London</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <main>
         {/* <ThemeChanger
