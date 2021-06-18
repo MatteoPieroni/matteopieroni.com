@@ -17,9 +17,11 @@ export const Hero: React.FC = () => {
         </picture> */}
         {/* <Image src="/assets/matteo-pieroni-front-end-developer-1920.jpg" alt="" width={1920} height={1080} /> */}
         <h1>
-          I'm Matteo Pieroni,
+          Matteo Pieroni
           <br />
-          Front End Developer
+          Software Developer
+          <br />
+          <span className="subtext">Front End/Accessibility/React</span>
         </h1>
       </div>
     </section>
