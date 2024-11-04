@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Workplaces from '../components/Workplaces.astro';
+---
+
+<style>
+  main {
+    @media screen and (min-width: 1024px) {
+      max-width: 768px;
+    }
+  }
+
+  section {
+    @media screen and (min-width: 1024px) {
+      margin-block-end: 2.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 2.25rem;
+
+    @media (min-width: 768px) {
+      display: block;
+      max-width: 1200px;
+      font-size: 2.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3.5rem;
+    }
+
+    .title-smaller {
+      display: inline-block;
+      font-size: 0.75em;
+    }
+  }
+
+  h2 {
+    margin-block-end: 1.25rem;
+  }
+
+  .technologies {
+    margin: 0;
+    padding: 0 1rem;
+    column-count: 2;
+
+    li {
+      line-height: 1.5rem;
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 1024px) {
+      column-count: 3;
+    }
+  }
+</style>
+
+<Layout title="Senior Front End Software Engineer - Matteo Pieroni">
+  <main>
+    <h1>
+      Hello there!<br /><span class="title-smaller"
+        >I'm Matteo Pieroni, Front End Software Engineer</span
+      >
+    </h1>
+
+    <section>
+      <p>
+        Throughout my time as a software engineer, I was lucky enough to work
+        with amazing people and on a variety of different products, some used by
+        millions of people.
+      </p>
+      <p>
+        Since the old days of Wordpress and jQuery, I've picked up a couple
+        specific focuses that I really enjoy: accessibility and architecture. I
+        love building well thought out, performant, and maintainable software
+        that is usable by as many folks as possible.
+      </p>
+      <p>
+        In my spare time, I am a certified safari guide and an enthusiastic
+        wildlife photographer. I love exploring nature and capturing moments
+        through my camera lens, with the importance of detail, patience, and
+        perspective at the forefront of my thoughts — qualities I bring to my
+        engineering work as well.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technologies</h2>
+      <ul class="technologies">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Js</li>
+        <li>React</li>
+        <li>NextJs</li>
+        <li>testing-library</li>
+        <li>Jest</li>
+        <li>GraphQL</li>
+        <li>Vercel</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <Workplaces />
+    </section>
+  </main>
+</Layout>
