@@ -5,6 +5,7 @@ todos:
 - performance check
 - accessibility check
 - browsers check
+- meta description
 - icons
 - theme
 - blog
