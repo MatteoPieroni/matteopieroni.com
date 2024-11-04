@@ -1,12 +1,18 @@
+---
+import Card from './Card.astro';
+---
+
 <style>
   footer {
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 2.5rem;
+    margin-block-start: 2.5rem;
+    margin-block-end: 3rem;
     padding: 1.5rem;
 
     @media screen and (min-width: 1024px) {
       max-width: 768px;
+      margin-block-end: 5rem;
     }
 
     h2 {
@@ -21,20 +27,44 @@
         margin-right: 0;
       }
     }
+  }
 
-    a {
-      display: inline-block;
-      padding-right: 0 !important;
+  .link-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  a {
+    position: relative;
+    border-radius: 4px;
+    padding: 0.75rem;
+
+    &:after {
+      content: '';
+      box-shadow:
+        inset 0 0 0 3000px rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.5) 0px 2px 6px;
+      filter: blur(3px);
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0.75rem;
+    display: inline-block;
   }
 </style>
 
 <footer class="full-width">
   <h2>Where to find me?</h2>
-  <p>
+  <div class="link-container">
     <a href="https://www.linkedin.com/in/pieronimatteo/">Linkedin</a>
-  </p>
-  <p>
-    <a href="mailto:matteopieroni6@gmail.com">Write me an email</a>
-  </p>
+    <a href="mailto:matteopieroni6@gmail.com">Email me</a>
+  </div>
 </footer>

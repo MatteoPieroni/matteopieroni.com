@@ -12,14 +12,18 @@ import '@fontsource-variable/work-sans';
     line-height: 1.5;
     color: var(--primary);
 
+    background-image: var(--backgroundOptimised);
+
     @media screen and (min-width: 768px) {
       font-size: 1.1rem;
     }
 
     @media screen and (min-width: 1024px) {
       font-size: 1.15rem;
+      background-image: var(--backgroundFullSize);
     }
   }
+
   p,
   li {
     color: var(--text);
@@ -101,11 +105,10 @@ import '@fontsource-variable/work-sans';
   }
 
   a {
-    position: relative;
     display: inline-block;
-    color: var(--text);
+    color: var(--primary);
     text-decoration-line: underline;
-    text-decoration-color: white;
+    text-decoration-color: var(--primary);
     text-decoration-thickness: 0.1rem;
     text-underline-offset: 0.3rem;
     transition:
@@ -115,16 +118,6 @@ import '@fontsource-variable/work-sans';
     &:hover {
       text-decoration-color: var(--secondary);
       text-decoration-thickness: 0.2rem;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      display: block;
-      width: 100%;
-      z-index: -1;
-      transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
@@ -137,8 +130,14 @@ import '@fontsource-variable/work-sans';
     background-size: 1rem;
   }
 
-  *:focus {
+  *:focus-visible {
     outline: 2px dashed var(--secondary);
+  }
+
+  @supports (not selector(:focus-visible)) {
+    *:focus {
+      outline: 2px dashed var(--secondary);
+    }
   }
 
   main {
@@ -148,9 +147,9 @@ import '@fontsource-variable/work-sans';
       margin: 0 1.5rem;
     }
 
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 1024px) {
       margin: 0 auto;
-      max-width: 1200px;
+      max-width: 768px;
     }
   }
 

@@ -3,6 +3,10 @@ import Footer from '../components/Footer.astro';
 import GlobalStyles from '../components/GlobalStyles.astro';
 import Header from '../components/Header.astro';
 
+import { getImage } from 'astro:assets';
+import backgroundFullSizeFile from '../assets/background.png';
+import backgroundOptimisedFile from '../assets/background.png';
+
 interface Props {
   title: string;
 }
@@ -12,22 +16,18 @@ const { title } = Astro.props;
 const lightTheme = {
   photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
   grayscaleFilter: 'none',
-  colors: {
-    primary: '#a64942',
-    primaryLighter: '#fe5f55',
-    card: '#eee',
-    background: '#fff',
-    backgroundLighter: '#dcdcdc',
-    text: '#333',
-    secondary: '#293462',
-  },
+  primary: '#a64942',
+  primaryLighter: '#fe5f55',
+  card: '#eee',
+  background: '#fff',
+  backgroundLighter: '#dcdcdc',
+  text: '#333',
+  secondary: '#293462',
 };
-const text = '#fff';
 
 const darkTheme = {
   photoGradient: 'linear-gradient(0.5turn, #000, transparent)',
   grayscaleFilter: 'brightness(0.5) grayscale(.5)',
-  // colors: {
   primary: '#fff',
   primaryLighter: '#fe5f55',
   card: '#0e1325',
@@ -37,8 +37,24 @@ const darkTheme = {
   text: '#fff',
   textContrast: '#000',
   secondary: '#ff6337',
-  // },
 };
+
+const backgroundOptimised = `url(${
+  (
+    await getImage({
+      src: backgroundOptimisedFile,
+      format: 'webp',
+    })
+  ).src
+})`;
+const backgroundFullSize = `url(${
+  (
+    await getImage({
+      src: backgroundFullSizeFile,
+      format: 'webp',
+    })
+  ).src
+})`;
 ---
 
 <html lang="en">
@@ -49,7 +65,9 @@ const darkTheme = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <style define:vars={{ ...darkTheme }}></style>
+    <style
+      define:vars={{ ...darkTheme, backgroundOptimised, backgroundFullSize }}
+    ></style>
     <GlobalStyles />
   </head>
   <body>
@@ -58,31 +76,3 @@ const darkTheme = {
     <Footer />
   </body>
 </html>
-<!-- <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style> -->

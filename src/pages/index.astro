@@ -2,22 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Workplaces from '../components/Workplaces.astro';
 import TechnologyTag from '../components/TechnologyTag.astro';
+import TechnologiesList from '../components/TechnologiesList.astro';
 ---
 
 <style>
-  body {
-    background-image: url('../assets/background-optimised.png');
-
-    @media screen and (min-width: 1024px) {
-      background-image: url('../assets/background.png');
-    }
-  }
-  main {
-    @media screen and (min-width: 1024px) {
-      max-width: 768px;
-    }
-  }
-
   section {
     @media screen and (min-width: 1024px) {
       margin-block-end: 2.5rem;
@@ -47,20 +35,6 @@ import TechnologyTag from '../components/TechnologyTag.astro';
 
   h2 {
     margin-block-end: 1.25rem;
-  }
-
-  .technologies {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      margin-inline-end: 0.5rem;
-      margin-block-end: 0.25rem;
-      display: inline-block;
-      line-height: 1.5rem;
-      font-weight: 400;
-    }
   }
 </style>
 
@@ -95,17 +69,21 @@ import TechnologyTag from '../components/TechnologyTag.astro';
 
     <section>
       <h2>Technologies</h2>
-      <ul class="technologies">
-        <li><TechnologyTag>HTML</TechnologyTag></li>
-        <li><TechnologyTag>CSS</TechnologyTag></li>
-        <li><TechnologyTag>Js</TechnologyTag></li>
-        <li><TechnologyTag>React</TechnologyTag></li>
-        <li><TechnologyTag>NextJs</TechnologyTag></li>
-        <li><TechnologyTag>testing-library</TechnologyTag></li>
-        <li><TechnologyTag>Jest</TechnologyTag></li>
-        <li><TechnologyTag>GraphQL</TechnologyTag></li>
-        <li><TechnologyTag>Vercel</TechnologyTag></li>
-      </ul>
+      <TechnologiesList
+        list={[
+          'HTML',
+          'CSS',
+          'Js',
+          'React',
+          'NextJs',
+          'testing-library',
+          'Jest',
+          'GraphQL',
+          'Vercel',
+          'Axe',
+          'Cypress',
+        ]}
+      />
     </section>
 
     <section>
