@@ -36,7 +36,7 @@ const darkTheme = {
   backgroundLight2: '#ffa323',
   text: '#fff',
   textContrast: '#000',
-  secondary: '#a64942',
+  secondary: '#ff6337',
   // },
 };
 ---
@@ -49,12 +49,6 @@ const darkTheme = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <style define:vars={{ ...darkTheme }}></style>
     <GlobalStyles />
   </head>

@@ -1,18 +1,55 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "matteopieroni.com",
+  "version": "0.2.0",
+  "description": "The code for matteopieroni.com",
+  "main": "index.js",
+  "repository": "https://github.com/MatteoPieroni/matteopieroni.com.git",
+  "author": "Matteo Pieroni <matteopieroni6@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "jest",
+    "test-ci": "jest --ci --runInBand --reporters=default --reporters=jest-junit"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^3.1.9",
+    "@fontsource-variable/work-sans": "^5.1.0",
     "astro": "^4.16.8",
     "typescript": "^5.6.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test-setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./test-results/jest",
+    "outputName": "./results.xml"
   }
 }

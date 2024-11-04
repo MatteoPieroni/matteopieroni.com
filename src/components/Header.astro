@@ -1,73 +1,35 @@
 ---
-import mobileImage from '../assets/matteo-pieroni-front-end-developer-640.jpg';
-import tabletImage from '../assets/matteo-pieroni-front-end-developer-960.jpg';
-import desktopImage from '../assets/matteo-pieroni-front-end-developer-1920.jpg';
+import { Image } from 'astro:assets';
+import Icon from '../assets/logo.png';
 ---
 
 <style>
   header {
-    .text {
-      position: relative;
-      display: flex;
+    .container {
+      padding: 0.5rem;
 
-      @media (min-width: 768px) {
-        max-height: 50vh;
+      @media screen and (min-width: 1024px) {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 1rem 0;
       }
     }
 
-    .text:before {
-      /* content: ''; */
-      background: var(--photoGradient);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
+    a {
+      text-decoration: none;
     }
 
-    h1 {
-      /* position: absolute;
-      top: 1%;
-      left: 3%;
-      width: 94%; */
-      font-size: 2.25rem;
-
-      @media (min-width: 768px) {
-        /* left: 50%; */
-        display: block;
-        max-width: 1200px;
-        font-size: 2.75rem;
-        /* transform: translateX(-50%); */
-      }
-
-      @media (min-width: 1024px) {
-        font-size: 3.5rem;
-      }
-    }
-    picture {
-      width: 100%;
-    }
     img {
-      display: block;
-      width: 100%;
-      object-position: center;
-      object-fit: contain;
-      filter: var(--grayscaleFilter);
-
-      @media (min-width: 768px) {
-        height: 100%;
-        object-fit: cover;
-      }
+      width: 50px;
+      height: auto;
     }
   }
 </style>
 
-<header class="full-width">
-  <div class="text">
-    <!-- <picture>
-      <source media="(min-width: 960px)" srcset={desktopImage.src} />
-      <source media="(min-width: 640px)" srcset={tabletImage.src} />
-      <img src={mobileImage.src} alt="Development Desk Set-up" />
-    </picture> -->
+<header>
+  <div class="container">
+    <a href="/" aria-label="Homepage">
+      <Image src={Icon} alt="Matteo Pieroni" />
+    </a>
   </div>
 </header>
