@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Workplaces from '../components/Workplaces.astro';
-import TechnologyTag from '../components/TechnologyTag.astro';
 import TechnologiesList from '../components/TechnologiesList.astro';
 ---
 
@@ -13,19 +12,7 @@ import TechnologiesList from '../components/TechnologiesList.astro';
   }
 
   h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
     margin-block-start: 0;
-
-    @media (min-width: 768px) {
-      display: block;
-      max-width: 1200px;
-      font-size: 2.75rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 3.5rem;
-    }
 
     .title-smaller {
       display: inline-block;
@@ -38,7 +25,10 @@ import TechnologiesList from '../components/TechnologiesList.astro';
   }
 </style>
 
-<Layout title="Senior Front End Software Engineer - Matteo Pieroni">
+<Layout
+  title="Senior Front End Software Engineer - Matteo Pieroni"
+  metaDescription="Front-end software engineer with extensive experience in building inclusive, scalable web applications and robust front-end architectures. Dedicated to creating user-centered, accessible digital experiences."
+>
   <main>
     <h1>
       Hello there!<br /><span class="title-smaller"

@@ -9,9 +9,10 @@ import backgroundOptimisedFile from '../assets/background.png';
 
 interface Props {
   title: string;
+  metaDescription: string;
 }
 
-const { title } = Astro.props;
+const { title, metaDescription } = Astro.props;
 
 const lightTheme = {
   photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
@@ -64,12 +65,15 @@ const backgroundFullSize = `url(${
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={metaDescription} />
     <title>{title}</title>
     <style
       define:vars={{ ...darkTheme, backgroundOptimised, backgroundFullSize }}
-    ></style>
-    <GlobalStyles />
-  </head>
+    ></style></head
+  >
+
+  <GlobalStyles />
+
   <body>
     <Header />
     <slot />

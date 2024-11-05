@@ -1,11 +1,10 @@
 todos:
 
-- content
-- transitions
 - performance check
 - accessibility check
+  - transition removal
 - browsers check
-- meta description
 - icons
+- external links security, icon, seo
 - theme
 - blog

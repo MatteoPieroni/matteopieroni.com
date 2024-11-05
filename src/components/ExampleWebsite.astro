@@ -1,0 +1,57 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  url: string;
+  image: ImageMetadata;
+  title: string;
+}
+
+const { url, image, title } = Astro.props;
+---
+
+<style>
+	.container {
+
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.5rem;
+		border-top: 3.5px solid;
+    background: var(--backgroundLighter);
+	}
+
+  .img-link {
+    border-radius: 5px;
+    padding: 0;
+    background: none;
+  }
+
+  img {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    margin: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
+    background: ${(props: IStyledProps) =>
+      props.theme.colors.backgroundLighter};
+  }
+</style>
+
+<div class="container">
+
+	<div class="img-link">
+			<Image src={image} alt="" />
+	</div>
+	<p class="footer">
+		<a href={url} target="_blank">
+			{title}
+		</a>
+	</p>
+</div>

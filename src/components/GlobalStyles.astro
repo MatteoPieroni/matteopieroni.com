@@ -47,60 +47,49 @@ import '@fontsource-variable/work-sans';
     font-weight: 200;
   }
 
-  h2 {
-    font-size: 1.7rem;
+  h1 {
+    font-size: 2.15em;
+    line-height: 1.2;
+
+    margin-block: 1rem 1.25rem;
 
     @media (min-width: 768px) {
-      font-size: 2rem;
+      font-size: 2.5em;
     }
 
     @media (min-width: 1024px) {
-      font-size: 2.25rem;
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-block: 1.5rem 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.7em;
+      margin-block: 2rem 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2em;
     }
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.25em;
+    margin-block: 1.25rem 0.75rem;
+
+    &:first-of-type {
+      margin-block-start: 1rem;
+    }
 
     @media (min-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.5em;
     }
 
     @media (min-width: 1024px) {
-      font-size: 2.25rem;
-    }
-  }
-  h4 {
-    font-size: 1.4rem;
-
-    @media (min-width: 768px) {
-      font-size: 1.9rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 2rem;
-    }
-  }
-  h5 {
-    font-size: 1.3rem;
-
-    @media (min-width: 768px) {
-      font-size: 1.8rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 1.9rem;
-    }
-  }
-  h6 {
-    font-size: 1.2rem;
-
-    @media (min-width: 768px) {
-      font-size: 1.7rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 1.8rem;
+      font-size: 1.7em;
     }
   }
 
@@ -111,9 +100,9 @@ import '@fontsource-variable/work-sans';
     text-decoration-color: var(--primary);
     text-decoration-thickness: 0.1rem;
     text-underline-offset: 0.3rem;
-    transition:
-      text-decoration-color 300ms,
-      text-decoration-thickness 300ms;
+    transition-property: text-decoration-color, text-decoration-thickness;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 
     &:hover {
       text-decoration-color: var(--secondary);
@@ -138,11 +127,12 @@ import '@fontsource-variable/work-sans';
     }
   }
 
-  main {
+  main,
+  .centered-width {
     margin: 0 0.5rem;
 
     @media (min-width: 768px) {
-      margin: 0 1.5rem;
+      margin: 0 auto;
     }
 
     @media screen and (min-width: 1024px) {
