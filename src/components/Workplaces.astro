@@ -94,10 +94,9 @@ const workplaces = Object.values(entries).sort(
   }
 
   .date {
-    margin-block-start: 0;
+    margin-block: 0;
     margin-inline-start: 0.5rem;
     padding-inline-start: 0.5rem;
-    margin-block-end: 0;
 
     @media screen and (min-width: 1024px) {
       padding-top: 1rem;
@@ -177,36 +176,6 @@ const workplaces = Object.values(entries).sort(
           <a href={`/work-experience/${slug}`}>
             Details <span class="sr-only">on {title}</span>
           </a>
-          {/* <p>{company.description}</p>
-        <p>
-          <strong>Tech used:</strong>
-          {company.tech}
-        </p>
-        {company.projects && (
-          <div>
-            <h4>Most interesting projects</h4>
-            <div class="full-width">
-              {company.projects.map((project) => (
-            <Project
-              title={project.projectTitle}
-              text={project.text}
-              topics={project.topics}
-              key={project.projectTitle}
-            />
-          ))} 
-            </div>
-          </div>
-        )}
-        {company.listOfLinks && (
-          <div>
-            <h4>Examples of realised websites</h4>
-            <ResponsiveGrid>
-          {company.listOfLinks.map((link) => (
-            <Website key={link.link} link={link.link} image={link.image} />
-          ))}
-        </ResponsiveGrid> 
-          </div>
-        )} */}
         </div>
       </li>
     ))
