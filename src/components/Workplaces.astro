@@ -125,6 +125,11 @@ const workplaces = Object.values(entries).sort(
       transition-property: box-shadow, filter;
       transition-duration: 0.2s;
       transition-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+
+      @media (prefers-reduced-motion) {
+        /* styles to apply if a user's device settings are set to reduced motion */
+        transition-duration: 0s;
+      }
     }
 
     &:hover:before,

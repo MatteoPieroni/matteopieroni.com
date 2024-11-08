@@ -100,8 +100,12 @@ import '@fontsource-variable/work-sans';
     text-decoration-thickness: 0.1rem;
     text-underline-offset: 0.3rem;
     transition-property: text-decoration-color, text-decoration-thickness;
-    transition-duration: 200ms;
+    transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    @media (prefers-reduced-motion) {
+      /* styles to apply if a user's device settings are set to reduced motion */
+      transition-duration: 0s;
+    }
 
     &:hover {
       text-decoration-color: var(--secondary);
