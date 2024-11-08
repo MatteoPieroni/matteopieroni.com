@@ -7,6 +7,7 @@ description: 'At Memphremagog my role was Front End Developer, working on client
 metaDescription: 'My experience at Memphremagog Digital Media Factory, as Front End Developer, working on clients’ web projects.'
 ---
 
+import TwoColumn from '../../components/TwoColumn.astro';
 import TechnologiesList from '../../components/TechnologiesList.astro';
 import ExampleWebsite from '../../components/ExampleWebsite.astro';
 import LocandaFrancigena from '../../assets/website-locanda-francigena-matteo-pieroni.jpg';
@@ -35,8 +36,16 @@ At Memphremagog my role was Front End Developer, working on client’s web proje
 		'Adobe Animate',
 ]} />
 
-<ExampleWebsite url="http://www.lalocandafrancigena.it" title="La locanda francigena" image={LocandaFrancigena} />
-<ExampleWebsite url="http://madeinlucca.it" title="Made in Lucca" image={MadeInLucca} />
-<ExampleWebsite url="http://www.tecnoservice.lucca.it" title="Tecnoservice Lucca" image={TecnoserviceLucca} />
-<ExampleWebsite url="http://www.rctabletop.it" title="RC Tabletop" image={RcTabletop} />
-<ExampleWebsite url="http://www.eventservicetuscany.it" title="Event Service Tuscany" image={EventServiceTuscany} />
+## Websites
+
+<div style="margin-block-end: 1.5rem;">
+The following are some of the websites I worked on during my time at Memphremagog.
+</div>
+
+<TwoColumn>
+	<ExampleWebsite url="http://www.lalocandafrancigena.it" title="La locanda francigena" image={LocandaFrancigena} />
+	<ExampleWebsite url="http://madeinlucca.it" title="Made in Lucca" image={MadeInLucca} />
+	<ExampleWebsite url="http://www.tecnoservice.lucca.it" title="Tecnoservice Lucca" image={TecnoserviceLucca} />
+	<ExampleWebsite url="http://www.rctabletop.it" title="RC Tabletop" image={RcTabletop} />
+	<ExampleWebsite url="http://www.eventservicetuscany.it" title="Event Service Tuscany" image={EventServiceTuscany} />
+</TwoColumn>

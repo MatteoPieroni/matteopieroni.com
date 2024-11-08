@@ -19,7 +19,6 @@ const lightTheme = {
   grayscaleFilter: 'none',
   primary: '#a64942',
   primaryLighter: '#fe5f55',
-  card: '#eee',
   background: '#fff',
   backgroundLighter: '#dcdcdc',
   text: '#333',
@@ -31,10 +30,8 @@ const darkTheme = {
   grayscaleFilter: 'brightness(0.5) grayscale(.5)',
   primary: '#fff',
   primaryLighter: '#fe5f55',
-  card: '#0e1325',
   background: '#002F35',
-  backgroundLighter: '#4a588c',
-  backgroundLight2: '#ffa323',
+  backgroundLight: '#ffa323',
   text: '#fff',
   textContrast: '#000',
   secondary: '#ff6337',
@@ -69,8 +66,8 @@ const backgroundFullSize = `url(${
     <title>{title}</title>
     <style
       define:vars={{ ...darkTheme, backgroundOptimised, backgroundFullSize }}
-    ></style></head
-  >
+    ></style>
+  </head>
 
   <GlobalStyles />
 

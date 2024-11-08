@@ -12,19 +12,19 @@ const { url, image, title } = Astro.props;
 ---
 
 <style>
-	.container {
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 1.5rem;
-		border-top: 3.5px solid;
-    background: var(--backgroundLighter);
-	}
-
-  .img-link {
-    border-radius: 5px;
-    padding: 0;
-    background: none;
+  a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   img {
@@ -35,23 +35,19 @@ const { url, image, title } = Astro.props;
   }
 
   .footer {
-    margin: 0;
+    border-inline: var(--secondary) 2px solid;
+    border-block-end: var(--secondary) 2px solid;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 1rem;
-    background: ${(props: IStyledProps) =>
-      props.theme.colors.backgroundLighter};
   }
 </style>
 
 <div class="container">
-
-	<div class="img-link">
-			<Image src={image} alt="" />
-	</div>
-	<p class="footer">
-		<a href={url} target="_blank">
-			{title}
-		</a>
-	</p>
+  <Image src={image} alt="" />
+  <p class="footer">
+    <a href={url} target="_blank">
+      {title}
+    </a>
+  </p>
 </div>
