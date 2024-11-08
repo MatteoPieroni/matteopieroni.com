@@ -51,5 +51,9 @@
   "jest-junit": {
     "outputDirectory": "./test-results/jest",
     "outputName": "./results.xml"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
