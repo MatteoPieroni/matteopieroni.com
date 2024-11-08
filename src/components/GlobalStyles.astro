@@ -50,7 +50,6 @@ import '@fontsource-variable/work-sans';
   h1 {
     font-size: 2.15em;
     line-height: 1.2;
-
     margin-block: 1rem 1.25rem;
 
     @media (min-width: 768px) {
@@ -118,12 +117,12 @@ import '@fontsource-variable/work-sans';
   }
 
   *:focus-visible {
-    outline: 2px dashed var(--secondary);
+    outline: 2px dotted var(--backgroundLight2);
   }
-
+  
   @supports (not selector(:focus-visible)) {
     *:focus {
-      outline: 2px dashed var(--secondary);
+      outline: 2px dotted var(--backgroundLight2););
     }
   }
 

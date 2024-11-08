@@ -1,31 +1,11 @@
----
-import Card from './Card.astro';
----
-
 <style>
   footer {
-    max-width: 1200px;
-    margin: 0 auto;
     margin-block-start: 2.5rem;
     margin-block-end: 3rem;
-    padding: 1.5rem;
+    padding-block: 1.5rem;
 
     @media screen and (min-width: 1024px) {
-      max-width: 768px;
       margin-block-end: 5rem;
-    }
-
-    h2 {
-      color: #fff;
-    }
-
-    svg {
-      margin-right: 1.5rem;
-      width: 50px;
-      fill: #fff;
-      &:last-child {
-        margin-right: 0;
-      }
     }
   }
 
@@ -61,7 +41,7 @@ import Card from './Card.astro';
   }
 </style>
 
-<footer class="full-width">
+<footer class="centered-width">
   <h2>Where to find me?</h2>
   <div class="link-container">
     <a href="https://www.linkedin.com/in/pieronimatteo/">Linkedin</a>
