@@ -13,8 +13,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "jest",
-    "test-ci": "jest --ci --runInBand --reporters=default --reporters=jest-junit"
+    "lint": "eslint --fix 'src/**/*.{ts,js,astro}'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
