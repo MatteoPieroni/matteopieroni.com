@@ -1,0 +1,14 @@
+<style>
+  div {
+    display: grid;
+    gap: 1rem;
+
+    @media screen and (min-width 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<div>
+  <slot />
+</div>

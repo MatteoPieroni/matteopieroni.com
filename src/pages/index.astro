@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Workplaces from '../components/Workplaces.astro';
+import TechnologiesList from '../components/TechnologiesList.astro';
+---
+
+<style>
+  section {
+    @media screen and (min-width: 1024px) {
+      margin-block-end: 2.5rem;
+    }
+  }
+
+  .title-smaller {
+    display: inline-block;
+    font-size: 0.75em;
+  }
+
+  h2 {
+    margin-block-end: 1.25rem;
+  }
+</style>
+
+<Layout
+  title="Senior Front End Software Engineer - Matteo Pieroni"
+  metaDescription="Front-end software engineer with extensive experience in building inclusive, scalable web applications and robust front-end architectures. Dedicated to creating user-centered, accessible digital experiences."
+>
+  <main>
+    <h1>
+      Hello there!
+      <br />
+      <span class="title-smaller"
+        >I'm Matteo Pieroni, Front End Software Engineer</span
+      >
+    </h1>
+
+    <section>
+      <p>
+        Throughout my time as a software engineer, I was lucky enough to work
+        with amazing people and on a variety of different products, some used by
+        millions of people.
+      </p>
+      <p>
+        Since the old days of Wordpress and jQuery, I've picked up a couple
+        specific focuses that I really enjoy: accessibility and architecture. I
+        love building well thought out, performant, and maintainable software
+        that is usable by as many folks as possible.
+      </p>
+      <p>
+        In my spare time, I am a certified safari guide and an enthusiastic
+        wildlife photographer. I love exploring nature and capturing moments
+        through my camera lens, with the importance of detail, patience, and
+        perspective at the forefront of my thoughts — qualities I bring to my
+        engineering work as well.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technologies</h2>
+      <TechnologiesList
+        list={[
+          'HTML',
+          'CSS',
+          'Js',
+          'React',
+          'NextJs',
+          'testing-library',
+          'Jest',
+          'GraphQL',
+          'Vercel',
+          'Axe',
+          'Cypress',
+        ]}
+      />
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <Workplaces />
+    </section>
+  </main>
+</Layout>

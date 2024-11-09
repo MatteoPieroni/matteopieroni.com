@@ -1,0 +1,160 @@
+---
+import '@fontsource-variable/work-sans';
+---
+
+<style is:global>
+  body {
+    margin: 0;
+    background: var(--background);
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--primary);
+
+    background-image: var(--backgroundOptimised);
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.15rem;
+      background-image: var(--backgroundFullSize);
+    }
+  }
+
+  p,
+  li {
+    color: var(--text);
+    margin: 0;
+  }
+
+  p {
+    margin-block-end: 0.5rem;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    font-weight: 400;
+    color: var(--text);
+  }
+  h1,
+  h2 {
+    font-weight: 200;
+  }
+
+  h1 {
+    font-size: 2.15em;
+    line-height: 1.2;
+    margin-block: 1rem 1.25rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5em;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-block: 1.5rem 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.7em;
+      margin-block: 2rem 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2em;
+    }
+  }
+
+  h3 {
+    font-size: 1.25em;
+    margin-block: 1.25rem 0.75rem;
+
+    &:first-of-type {
+      margin-block-start: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.5em;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.7em;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration-line: underline;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.3rem;
+    transition-property: text-decoration-color, text-decoration-thickness;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    @media (prefers-reduced-motion) {
+      /* styles to apply if a user's device settings are set to reduced motion */
+      transition-duration: 0s;
+    }
+
+    &:hover {
+      text-decoration-color: var(--secondary);
+      text-decoration-thickness: 0.2rem;
+    }
+  }
+
+  a:not([href*='matteopieroni.com']):not([href^='#']):not([href^='/']) {
+    background-origin: center;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+  }
+
+  *:focus-visible {
+    outline: 2px dotted var(--backgroundLight);
+  }
+
+  @supports (not selector(:focus-visible)) {
+    *:focus {
+      outline: 2px dotted var(--backgroundLight);
+    }
+  }
+
+  main,
+  .centered-width {
+    margin: 0 0.5rem;
+
+    @media (min-width: 768px) {
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin: 0 auto;
+      max-width: 768px;
+    }
+  }
+
+  .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important; /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important; /* 3 */
+  }
+</style>

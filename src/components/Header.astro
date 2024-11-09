@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '../assets/logo.png';
+---
+
+<style>
+  header {
+    .container {
+      padding-block: 0.5rem;
+
+      @media screen and (min-width: 1024px) {
+        padding-block: 1rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+</style>
+
+<header>
+  <div class="container centered-width">
+    <a href="/" aria-label="Homepage">
+      <Image src={Icon} alt="Matteo Pieroni" />
+    </a>
+  </div>
+</header>

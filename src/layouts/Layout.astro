@@ -1,0 +1,83 @@
+---
+import Footer from '../components/Footer.astro';
+import GlobalStyles from '../components/GlobalStyles.astro';
+import Header from '../components/Header.astro';
+
+import { getImage } from 'astro:assets';
+import backgroundFullSizeFile from '../assets/background.png';
+import backgroundOptimisedFile from '../assets/background.png';
+
+interface Props {
+  title: string;
+  metaDescription: string;
+}
+
+const { title, metaDescription } = Astro.props;
+
+const lightTheme = {
+  photoGradient: 'linear-gradient(0.5turn, #fff, transparent)',
+  grayscaleFilter: 'none',
+  primary: '#a64942',
+  primaryLighter: '#fe5f55',
+  background: '#fff',
+  backgroundLighter: '#dcdcdc',
+  text: '#333',
+  secondary: '#293462',
+};
+
+const darkTheme = {
+  photoGradient: 'linear-gradient(0.5turn, #000, transparent)',
+  grayscaleFilter: 'brightness(0.5) grayscale(.5)',
+  primary: '#fff',
+  primaryLighter: '#fe5f55',
+  background: '#002F35',
+  backgroundLight: '#ffa323',
+  text: '#fff',
+  textContrast: '#000',
+  secondary: '#ff6337',
+};
+
+const backgroundOptimised = `url(${
+  (
+    await getImage({
+      src: backgroundOptimisedFile,
+      format: 'webp',
+    })
+  ).src
+})`;
+const backgroundFullSize = `url(${
+  (
+    await getImage({
+      src: backgroundFullSizeFile,
+      format: 'webp',
+    })
+  ).src
+})`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={metaDescription} />
+    <title>{title}</title>
+    <style
+      define:vars={{
+        ...darkTheme,
+        backgroundOptimised,
+        backgroundFullSize,
+      }}
+    ></style>
+  </head>
+
+  <GlobalStyles />
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+import TechnologyTag from './TechnologyTag.astro';
+
+interface Props {
+  list: string[];
+}
+
+const { list } = Astro.props;
+---
+
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin-inline-end: 0.5rem;
+      margin-block-end: 0.25rem;
+      display: inline-block;
+      line-height: 1.5rem;
+      font-weight: 400;
+    }
+  }
+</style>
+
+<ul>
+  {
+    list.map((tech) => (
+      <li>
+        <TechnologyTag>{tech}</TechnologyTag>
+      </li>
+    ))
+  }
+</ul>
