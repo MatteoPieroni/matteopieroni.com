@@ -13,4 +13,5 @@ export default {
   semi: true,
   singleQuote: true,
   bracketSpacing: true,
+  bracketSameLine: true
 };
