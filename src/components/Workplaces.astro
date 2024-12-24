@@ -171,7 +171,7 @@ const workplaces = Object.values(entries).sort(
         <p class="date">{dates}</p>
         <div class="work-timeline">
           <!-- prettier-ignore -->
-          <p class="name" id={title.toLowerCase().replaceAll(' ', '')}>{title}</p>
+          <p class="name" id={title.toLowerCase().replaceAll(' ', '')} style={{ 'view-transition-name' : title.toLowerCase().replaceAll(' ', '')}}>{title}</p>
           <p>{description}</p>
           <a href={`/work-experience/${slug}`}>
             Details <span class="sr-only">on {title}</span>

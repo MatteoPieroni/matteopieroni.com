@@ -5,7 +5,14 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title} metaDescription={frontmatter.metaDescription}>
   <main>
-    <h1>{frontmatter.title}</h1>
+    <h1
+      style={{
+        'view-transition-name': frontmatter.title
+          .toLowerCase()
+          .replaceAll(' ', ''),
+      }}>
+      {frontmatter.title}
+    </h1>
     <slot />
   </main>
 </Layout>
